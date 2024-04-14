@@ -19,8 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `qlcoffee`
 --
-CREATE DATABASE `qlcf` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-USE `qlcf`;
+CREATE DATABASE `qlcoffee` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+USE `qlcoffee`;
 
 -- --------------------------------------------------------
 
@@ -36,14 +36,14 @@ CREATE TABLE IF NOT EXISTS `danhsach` (
   `PhanLoai` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `DonGia` int(10) NOT NULL,
   `HinhAnh` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`MaDU`)
+  PRIMARY KEY (`MaDS`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3;
 
 --
 -- Dumping data for table `danhsach`
 --
 
-INSERT INTO `coffee` (`MaDS`, `Ten`, `MoTa`, `PhanLoai`, `DonGia`, `HinhAnh`) VALUES
+INSERT INTO `danhsach` (`MaDS`, `Ten`, `MoTa`, `PhanLoai`, `DonGia`, `HinhAnh`) VALUES
 (1, 'Cà phê truyền thống', 'Cà phê truyền thống là một phần không thể thiếu của nền văn hóa và cuộc sống hàng ngày của nhiều quốc gia trên khắp thế giới. Từ những quán cà phê nho nhỏ đến những tiệm cà phê sang trọng, cà phê đã trở thành biểu tượng của sự kết nối, thư giãn và trò chuyện.
 Mỗi quốc gia có những phong cách cà phê truyền thống riêng, với những cách pha chế và phục vụ đặc trưng. Tuy nhiên, có một số yếu tố chung trong cà phê truyền thống mà người ta thường thấy, bao gồm:
 Hương vị đậm đà: Cà phê truyền thống thường có hương vị đậm đà, mạnh mẽ và thơm ngon. Điều này thường được đạt được thông qua việc sử dụng hạt cà phê rang màu đậm và pha chế theo các kỹ thuật truyền thống.
@@ -57,29 +57,7 @@ Americano được pha chế đơn giản từ một tách espresso và nước 
 Với Americano, người uống cà phê có thể tận hưởng một ly cà phê nhẹ nhàng, dễ uống, với hương vị thanh mát và hậu vị đặc trưng. Đây cũng là lựa chọn phổ biến cho những người mới bắt đầu thưởng thức cà phê Espresso, vì nó giảm đi tính chất đậm đà và cay nồng của Espresso mà vẫn giữ lại được hương vị cà phê tinh tế.
 Americano thường được thưởng thức vào bất kỳ thời điểm nào trong ngày và có thể được phục vụ ở nhiều quán cà phê trên khắp thế giới, từ những tiệm cà phê phong cách Italia đến các chuỗi cà phê quốc tế. Đối với nhiều người, Americano không chỉ là một thức uống, mà còn là biểu tượng của sự đơn giản và thưởng thức cà phê mà không cần quá phức tạp.', 'đồ uống',25000, 'images\h2_cfAmericano.jpg');
 
--- --------------------------------------------------------
 
---
--- Table structure for table `giohang`
---
-
-DROP TABLE IF EXISTS `giohang`;
-CREATE TABLE IF NOT EXISTS `giohang` (
-  `MaGH` int(10) NOT NULL AUTO_INCREMENT,
-  `MaNguoiDung` int(10) NOT NULL AUTO_INCREMENT,
-  `MaDS` int(10) NOT NULL AUTO_INCREMENT,
-  `SoLuong` int(10) NOT NULL,
-  PRIMARY KEY (`MaGH`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
-
---
--- Dumping data for table `tbl_nguoidung`
---
-
-INSERT INTO `nguoidung` (`MaNguoiDung`, `TenNguoiDung`, `TenDangNhap`, `MatKhau`, `QuyenHan`, `Khoa`) VALUES
-(1, 'Trần Văn A', 'tva', 'e10adc3949ba59abbe56e057f20f883e', 1, 0),
-(2, 'Trần Văn B', 'tvb', 'e10adc3949ba59abbe56e057f20f883e 	', 1, 0),
-(3, 'Trần Văn C', 'tvc', 'e10adc3949ba59abbe56e057f20f883e', 2, 0);
 
 -- --------------------------------------------------------
 
@@ -110,3 +88,27 @@ INSERT INTO `nguoidung` (`MaNguoiDung`, `TenNguoiDung`, `TenDangNhap`, `MatKhau`
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `giohang`
+--
+
+DROP TABLE IF EXISTS `giohang`;
+CREATE TABLE IF NOT EXISTS `giohang` (
+  `MaGH` int(10) NOT NULL AUTO_INCREMENT,
+  `MaNguoiDung` int(10) NOT NULL,
+  `MaDS` int(10) NOT NULL,
+  `SoLuong` int(10) NOT NULL,
+  PRIMARY KEY (`MaGH`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `giohang`
+--
+
+-- INSERT INTO `nguoidung` (`MaNguoiDung`, `TenNguoiDung`, `TenDangNhap`, `MatKhau`, `QuyenHan`, `Khoa`) VALUES
+-- (1, 'Trần Văn A', 'tva', 'e10adc3949ba59abbe56e057f20f883e', 1, 0),
+-- (2, 'Trần Văn B', 'tvb', 'e10adc3949ba59abbe56e057f20f883e 	', 1, 0),
+-- (3, 'Trần Văn C', 'tvc', 'e10adc3949ba59abbe56e057f20f883e', 2, 0);
