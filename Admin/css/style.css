@@ -1,0 +1,19 @@
+body{
+    background-color: #ffffff;
+    margin: 0px;
+}
+#banner{
+    display: block;
+    background-image: url("../images/banner.png");
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+
+}
+p.ad_content{
+    font-size: 16pt;
+}
+.content{
+    margin-left: 300px;
+    margin-right: 300px;
+}
