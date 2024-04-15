@@ -1,0 +1,22 @@
+body{
+    background-color: #ffffff;
+    margin: 0px;
+}
+#banner{
+    display: block;
+    background-image: url("../images/banner.png");
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+
+}
+#content{
+    padding: 20px;
+}
+#footer{
+    clear: both;
+    background-color: #363636;
+    color: #ffffff;
+    font-size: 12pt;
+    font-family: Helvetica;
+}
