@@ -13,6 +13,18 @@ body{
 #content{
     padding: 20px;
 }
+
+.khungsanpham
+{
+	width: 250px;
+    height: 260px;	
+	float: left;
+    text-align: center;
+    border: solid burlywood;
+    background-color: blue;
+    margin: 2%;
+}
+
 #footer{
     clear: both;
     background-color: #363636;
@@ -20,3 +32,4 @@ body{
     font-size: 12pt;
     font-family: Helvetica;
 }
+
