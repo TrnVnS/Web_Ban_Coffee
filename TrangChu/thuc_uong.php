@@ -21,15 +21,16 @@
 					
 			while ($row = $danhsach->fetch_array(MYSQLI_ASSOC)) 		
 			{						
-				
-				echo "<div class='khungsp'>";
-					echo "<div class='card'>";					
-						// echo "<a href='#" . $row['MaDS'] . "&id_nsx=" . $row['IdNhaSanXuat'] . "'>";
-						echo "<img class='hinhanhphim' src=" . $row["HinhAnh"] . " style='width: 190px; height: 140px;'>";
-						echo "<span class='tenphim' ></span> <br />";
-						echo "<span class=\"giaban\">". $row["DonGia"] ." đ</span>";
-						echo "<p><a  href=''>". $row["Ten"] ." </a></p>";
-					echo "</div>";		
+				echo "<div class='container'>";
+					echo "<div class='khungsp'>";
+						echo "<div class='card'>";					
+							// echo "<a href='#" . $row['MaDS'] . "&id_nsx=" . $row['IdNhaSanXuat'] . "'>";
+							echo "<img class='hinhanhphim' src=" . $row["HinhAnh"] . " style='width: 190px; height: 140px;'>";
+							echo "<span class='tenphim' ></span> <br />";
+							echo "<span class=\"giaban\">". $row["DonGia"] ." đ</span>";
+							echo "<p><a  href=''>". $row["Ten"] ." </a></p>";
+						echo "</div>";		
+					echo "</div>";
 				echo "</div>";	
 			}
 

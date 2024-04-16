@@ -13,7 +13,9 @@ body{
 #content{
     padding: 20px;
 }
-
+p.ad_content{
+    font-size: 18pt;
+}
 .khungsp
 {
 	width: 250px;
@@ -33,14 +35,5 @@ body{
     text-align: center;
 	border: 1px solid red;
 	float: left;
-}
-
-#footer{
-    float: none;
-    clear: both;
-    background-color: #363636;
-    color: #ffffff;
-    font-size: 12pt;
-    font-family: Helvetica;
 }
 

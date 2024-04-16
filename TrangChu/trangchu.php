@@ -90,7 +90,6 @@
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Về chúng tôi</a></li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">FAQs</a></li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Tuyển dụng</a></li>
-                            <li class="nav-item mb-2"><a href="/Admin/admin.html" class="nav-link p-0 text-dark">Trang dành cho nhân viên</a></li>
                         </ul>
                     </div>
 
