@@ -18,9 +18,9 @@ body{
 {
 	width: 250px;
     height: 260px;	
-	float: left;
+	/* float: left; */
     text-align: center;
-    border: solid burlywood;
+    border: solid red;
     background-color: blue;
     margin: 2%;
 }
