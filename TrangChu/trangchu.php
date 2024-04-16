@@ -33,10 +33,10 @@
                     <a class="navbar-brand ms-2" href="">
                         <img src="images/Logo.png" width="50px">
                     </a>
-                    <div class="navbar" id="navbarNav">
-                        <ul class="navbar-nav">
+                    <div class="navbar">
+                        <ul class="nav nav-underline">
                             <li class="nav-item ms-3">
-                                <a class="nav-link active text-light" aria-current="page" href="trangchu.php?do=home">Trang chủ</a>
+                                <a class="nav-link text-light" aria-current="page" href="trangchu.php?do=home">Trang chủ</a>
                             </li>
                             <li class="nav-item ms-3">
                                 <a class="nav-link text-light" href="trangchu.php?do=thuc_uong">Thức uống</a>
@@ -71,7 +71,6 @@
         </header>
         <!--Content-->
         <div id="content">
-
             <?php
 						
 				$do = isset($_GET['do']) ? $_GET['do'] : "home";
@@ -91,6 +90,7 @@
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Về chúng tôi</a></li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">FAQs</a></li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Tuyển dụng</a></li>
+                            <li class="nav-item mb-2"><a href="/Admin/admin.html" class="nav-link p-0 text-dark">Trang dành cho nhân viên</a></li>
                         </ul>
                     </div>
 
