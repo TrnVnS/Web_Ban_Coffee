@@ -14,18 +14,29 @@ body{
     padding: 20px;
 }
 
-.khungsanpham
+.khungsp
 {
 	width: 250px;
     height: 260px;	
-	/* float: left; */
+	float: left;
+}
+
+.card {
+    width: 234px;
+    height: 200px;
+    margin: 8px;
+    padding: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s;
     text-align: center;
-    border: solid red;
-    background-color: blue;
-    margin: 2%;
+	border: 1px solid red;
+	float: left;
 }
 
 #footer{
+    float: none;
     clear: both;
     background-color: #363636;
     color: #ffffff;

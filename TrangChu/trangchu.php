@@ -42,10 +42,10 @@
                                 <a class="nav-link text-light" href="trangchu.php?do=thuc_uong">Thức uống</a>
                             </li>
                             <li class="nav-item ms-3">
-                                <a class="nav-link text-light" href="#">Món ăn</a>
+                                <a class="nav-link text-light" href="trangchu.php?do=mon_an">Món ăn</a>
                             </li>
                             <li class="nav-item ms-3">
-                                <a class="nav-link text-light" href="#">Cà phê</a>
+                                <a class="nav-link text-light" href="trangchu.php?do=ca_phe">Cà phê</a>
                             </li>
                         </ul>
                     </div>
@@ -59,10 +59,10 @@
                                 </a>
                             </li>
                             <li class="nav-item ms-3">
-                                <a class="btn btn-outline-light rounded-pill" href="#">Đăng ký</a>
+                                <a class="btn btn-outline-light rounded-pill" href="trangchu.php?do=register">Đăng ký</a>
                             </li>
                             <li class="nav-item ms-3 me-3">
-                                <a class="btn btn-light rounded-pill" href="#">Đăng nhập</a>
+                                <a class="btn btn-light rounded-pill" href="trangchu.php?do=login">Đăng nhập</a>
                             </li>
                         </ul>
                     </div>
@@ -148,5 +148,4 @@
             </footer>
         </div>
     </body>
-
 </html>

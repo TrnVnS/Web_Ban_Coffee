@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Thức uống</title>
+        <title>Món ăn</title>
         <meta charset="UTF-8" />
     </head>
     <body>
-        <?php
+        <?php	
 			
-
-			$sql = "SELECT * FROM `danhsach` WHERE PhanLoai='đồ uống'";	
+            $sql = "SELECT * FROM danhsach WHERE PhanLoai='đồ ăn'";
 			$danhsach = $connect->query($sql);
-
+                
 			//Nếu kết quả kết nối không được thì xuất báo lỗi và thoát
 			if (!$danhsach) {
 				die("Không thể thực hiện câu lệnh SQL: " . $connect->connect_error);
 				exit();
 			}
 					
-			$count_kq = mysqli_num_rows($danhsach);	
+			$count_kq = mysqli_num_rows($danhsach);
 					
 			while ($row = $danhsach->fetch_array(MYSQLI_ASSOC)) 		
 			{						

@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Thức uống</title>
+        <title>Cà phê</title>
         <meta charset="UTF-8" />
     </head>
     <body>
         <?php
 			
-
-			$sql = "SELECT * FROM `danhsach` WHERE PhanLoai='đồ uống'";	
+			$sql = "SELECT * FROM `danhsach` WHERE PhanLoai='cà phê'";	
 			$danhsach = $connect->query($sql);
 
 			//Nếu kết quả kết nối không được thì xuất báo lỗi và thoát
@@ -16,8 +15,8 @@
 				die("Không thể thực hiện câu lệnh SQL: " . $connect->connect_error);
 				exit();
 			}
-					
-			$count_kq = mysqli_num_rows($danhsach);	
+			
+			$count_kq = mysqli_num_rows($danhsach);
 					
 			while ($row = $danhsach->fetch_array(MYSQLI_ASSOC)) 		
 			{						
@@ -36,7 +35,7 @@
 			if($count_kq > $_SESSION['limit_home'])
 			{
 				echo "<h3 class=\"xemthem\"><a href='index.php?do=home&limit_home=ok'>Xem thêm các sản phẩm khác</a></h3></td>";
-					
+                
 			}
 		?>
 
