@@ -75,13 +75,14 @@ CREATE TABLE IF NOT EXISTS `nguoidung` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5 ;
 
 --
--- Dumping data for table `tbl_nguoidung`
+-- Dumping data for table `nguoidung`
 --
 
 INSERT INTO `nguoidung` (`MaNguoiDung`, `TenNguoiDung`, `TenDangNhap`, `MatKhau`, `QuyenHan`, `Khoa`) VALUES
-(1, 'Trần Văn A', 'tva', 'e10adc3949ba59abbe56e057f20f883e', 1, 0),
-(2, 'Trần Văn B', 'tvb', 'e10adc3949ba59abbe56e057f20f883e 	', 1, 0),
-(3, 'Trần Văn C', 'tvc', 'e10adc3949ba59abbe56e057f20f883e', 2, 0);
+(1, 'Trần Văn Sĩ', 'tvs', 'e10adc3949ba59abbe56e057f20f883e', 2, 0),
+(2, 'Nguyễn Tấn Tài', 'ntt', 'e10adc3949ba59abbe56e057f20f883e 	', 2, 0),
+(3, 'Trần Văn A', 'tva', 'e10adc3949ba59abbe56e057f20f883e', 1, 0);
+(4, 'Trần Văn B', 'tva', 'e10adc3949ba59abbe56e057f20f883e', 3, 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

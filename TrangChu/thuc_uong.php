@@ -7,6 +7,16 @@
     <body>
         <?php
 			
+			// if(isset($_GET["limit_home"]) == true)
+			// {
+			// 	$_SESSION['limit_home'] += 6;
+			// }
+			// else
+			// {
+			// 	$_SESSION['limit_home'] = 12;
+			// }
+			// $limit_home_ok =  $_SESSION['limit_home'];
+				
 
 			$sql = "SELECT * FROM `danhsach` WHERE PhanLoai='đồ uống'";	
 			$danhsach = $connect->query($sql);
