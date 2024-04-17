@@ -6,11 +6,11 @@
         <div class="flex justify-content-start mt-2">
             <div class="mb-3">
                 <label for="txt_TenND" class="form-label">Tên người dùng</label>
-                <input type="text" class="form-control" placeholder="Nguyễn Văn A" id="txt_TenND" name="HoVaTen">
+                <input type="text" class="form-control" placeholder="Nguyễn Văn A" name="HoVaTen">
             </div>
             <div class="mb-3">
                 <label for="txt_TenDN" class="form-label">Tên đăng nhập</label>
-                <input type="text" class="form-control" id="txt_TenDN" name="TenDangNhap">
+                <input type="text" class="form-control" name="TenDangNhap">
             </div>
             <div class="mb-3">
                 <label for="txt_MK" class="form-label">Mật khẩu</label>
@@ -21,14 +21,14 @@
                 <input type="password" id="txt_MK" class="form-control" aria-describedby="passwordHelpBlock" name="XNMatKhau">
             </div>
             <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="cbo_DK" name="DieuKhoan">
+                <input type="checkbox" class="form-check-input" name="DieuKhoan">
                 <label class="form-check-label" for="cbo_DK">
                     Đồng ý với <a class="link-success" href="#">điều khoản</a> của chúng tôi.
                 </label>
             </div>
         </div>
         <div class="flex justify-center items-center text-center m-3 px-5">
-            <input type="submit" class="btn btn-outline-dark rounded-pill" id="btn_login" value="Đăng ký">
+            <input type="submit" class="btn btn-outline-dark rounded-pill" value="Đăng ký">
         </div>
     </form>
 </div>

@@ -67,7 +67,7 @@
 
                             <?php
 					        //hiện menu quản lý
-                                if(!isset($_SESSION['MaNguoiDung']))
+                                if(!isset($_SESSION['MaND']))
                                 {
                                     echo '<li class="nav-item ms-3">';
                                         echo '<a class="btn btn-outline-light rounded-pill" href="trangchu.php?do=register">Đăng ký</a>';
