@@ -18,32 +18,36 @@
         <!--Content-->
         <div id="content">
             <div class="d-flex justify-content-center m-5">
-                <form class="row g-1">
+                <form class="row g-1" action="trangchu.php?do=dangky_xuly" method="post">
                     <div class="flex justify-center items-center text-center px-5 border-bottom">
                         <h1>Đăng ký</h1>
                     </div>
                     <div class="flex justify-content-start mt-2">
                         <div class="mb-3">
                             <label for="txt_TenND" class="form-label">Tên người dùng</label>
-                            <input type="text" class="form-control"  placeholder="Nguyễn Văn A" id="txt_TenND">
+                            <input type="text" class="form-control"  placeholder="Nguyễn Văn A" id="txt_TenND" name="HoVaTen">
                         </div>
                         <div class="mb-3">
                             <label for="txt_TenDN" class="form-label">Tên đăng nhập</label>
-                            <input type="email" class="form-control" id="txt_TenDN">
+                            <input type="text" class="form-control" id="txt_TenDN" name="TenDangNhap">
                         </div>
                         <div class="mb-3">
                             <label for="txt_MK" class="form-label">Mật khẩu</label>
-                            <input type="password" id="txt_MK" class="form-control" aria-describedby="passwordHelpBlock">
+                            <input type="password" id="txt_MK" class="form-control" aria-describedby="passwordHelpBlock" name="MatKhau">
+                        </div>
+                        <div class="mb-3">
+                            <label for="txt_MK" class="form-label">Xác nhận mật khẩu</label>
+                            <input type="password" id="txt_MK" class="form-control" aria-describedby="passwordHelpBlock" name="XNMatKhau">
                         </div>
                         <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="cbo_DK">
+                            <input type="checkbox" class="form-check-input" id="cbo_DK" name="DieuKhoan">
                             <label class="form-check-label" for="cbo_DK">
                                 Đồng ý với <a class="link-success" href="#">điều khoản</a> của chúng tôi.
                             </label>
                         </div>
                     </div>
                     <div class="flex justify-center items-center text-center m-3 px-5">
-                        <button class="btn btn-outline-dark rounded-pill" type="submit" id="btn_login">Đăng ký</a>
+                        <input type="submit" class="btn btn-outline-dark rounded-pill" id="btn_login" value="Đăng ký">
                     </div>
                 </form>
             </div>
