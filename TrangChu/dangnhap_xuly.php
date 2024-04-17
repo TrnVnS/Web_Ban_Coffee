@@ -34,7 +34,6 @@
 				// Đăng ký SESSION
 				$_SESSION['MaND'] = $dong['MaNguoiDung'];
 				$_SESSION['HoTen'] = $dong['TenNguoiDung'];
-				$_SESSION['QuyenHan'] = $dong['QuyenHan'];
 				
 				// Chuyển hướng về trang index.php
 				header("Location: trangchu.php");
@@ -50,5 +49,4 @@
 			ThongBaoLoi("Tên đăng nhập hoặc mật khẩu không chính xác!");
 		}
 	}
-	
 ?>
