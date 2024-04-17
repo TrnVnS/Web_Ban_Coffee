@@ -24,7 +24,9 @@ p.ad_content{
     float: left;
     margin: 20px;
 }
-
+footer{
+    clear: both;
+}
 /* .card {
     width: 234px;
     height: 200px;

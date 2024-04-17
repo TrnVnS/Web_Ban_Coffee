@@ -9,3 +9,14 @@ body{
     background-size: cover;
     height: 200px;
 }
+footer{
+    clear: both;
+}
+.ThongBao{
+    color: #20d462;
+    background-color: #bafcd2;
+}
+.ThongBaoLoi{
+    color: #f32727;
+    background-color: #ffadad;
+}

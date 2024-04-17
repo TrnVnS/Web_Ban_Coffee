@@ -4,15 +4,13 @@
         session_start(); 
     } 
 	include_once "cauhinh.php";
-	
 	include_once "thuvien.php";
 ?>
-
 <!DOCTYPE html>
 <html>
     <head>
         <title>Trang chủ</title>
-        <meta charset="utf-8" />
+        <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -54,7 +52,6 @@
                     <div class="navbar" id="navbarNav">
                         <ul class="navbar-nav">
                             <?php
-					        //hiện menu quản lý
                                 if(!isset($_SESSION['MaND']))
                                 {
                                     echo '<li class="nav-item ms-3">';
@@ -71,6 +68,14 @@
                                             echo '<i class="bi bi-cart"></i> Giỏ hàng';
                                         echo '</a>';
                                     echo '</li>';
+                                    echo '<button class="btn btn-outline-light rounded-pill dropdown-toggle ms-3" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-person-fill-gear"></i>
+                                        '.$_SESSION['HoTen'].'
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="index.php?do=hoso">Hồ sơ</a></li>
+                                        <li><a class="dropdown-item" href="index.php?do=doimk">Đổi mật khẩu</a></li>
+                                    </ul>';
                                     echo '<li class="nav-item ms-3">';
                                         echo '<a class="btn btn-outline-light rounded-pill" href="index.php?do=dangxuat_xuly">Đăng xuất</a>';
                                     echo '</li>';
@@ -98,16 +103,22 @@
                         <h5>Về chúng tôi</h5>
                         <ul class="nav flex-column">
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Trang chủ</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Cửa hàng</a></li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Về chúng tôi</a></li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">FAQs</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Hệ thống cửa hàng</a></li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Tuyển dụng</a></li>
+                            <li class="nav-item mb-2"><a href="/DoAn/DoAn/Admin/index.php?do=home" class="nav-link p-0 text-dark">Trang quản lý</a></li>
                         </ul>
                     </div>
 
                     <div class="col-5 col-md-3 mb-3">
                         <h5>Liên hệ với chúng tôi</h5>
                         <ul class="nav flex-column">
+                            <li class="nav-item mb-2">
+                                <a href="#" class="nav-link p-0 text-dark">
+                                    <i class="bi bi-telephone"></i> : +84 123 4567 890
+                                </a>
+                            </li>
                             <li class="nav-item mb-2">
                                 <a href="#" class="nav-link p-0 text-dark">
                                     <i class="bi bi-envelope"></i> : kohicoffe@gmail.com

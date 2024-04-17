@@ -26,7 +26,7 @@ include_once "thuvien.php";
         <div id="banner"></div>
         <nav class="navbar navbar-expand bg-dark">
             <div class="container justify-content-start">
-                <a class="navbar-brand ms-2" href="#">
+                <a class="navbar-brand ms-2" href="index.php?do=home">
                     <img src="images/Logo.png" width="50px">
                 </a>
                 <div class="text-light ms-3" style="font-size: 20pt;">Trang quản lý</div>
@@ -37,25 +37,25 @@ include_once "thuvien.php";
                         <?php
                             if (!isset($_SESSION['MaND'])) {
                                 echo '<li class="nav-item ms-3">
-                                        <a class="btn btn-outline-light rounded-pill" href="admin.php?do=register">Đăng ký</a>
+                                        <a class="btn btn-outline-light rounded-pill" href="index.php?do=register">Đăng ký</a>
                                     </li>
                                     <li class="nav-item ms-3 me-3">
-                                        <a class="btn btn-light rounded-pill" href="admin.php?do=login">Đăng nhập</a>
+                                        <a class="btn btn-light rounded-pill" href="index.php?do=login">Đăng nhập</a>
                                     </li>';
                             }
                             else if(isset($_SESSION['MaND'])) {
                                 echo '<li class="nav-item ms-3">
-                                    <a class="btn btn-outline-light rounded-pill dropdown-toggle" href="register.html" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button class="btn btn-outline-light rounded-pill dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                         <i class="bi bi-person-fill-gear"></i>
-                                        Tài khoản
-                                    </a>
+                                        '.$_SESSION['HoTen'].'
+                                    </button>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Hồ sơ</a></li>
-                                        <li><a class="dropdown-item" href="#">Đổi mật khẩu</a></li>
+                                        <li><a class="dropdown-item" href="index.php?do=hoso">Hồ sơ</a></li>
+                                        <li><a class="dropdown-item" href="index.php?do=doimk">Đổi mật khẩu</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item ms-3 me-3">
-                                    <a class="btn btn-outline-light rounded-pill" href="login.html">Đăng xuất</a>
+                                    <a class="btn btn-outline-light rounded-pill" href="index.php?do=dangxuat_xuly">Đăng xuất</a>
                                 </li>';
                             }
                         ?>
@@ -76,19 +76,13 @@ include_once "thuvien.php";
                                     <h3>Quản lý</h3>
                                     <?php
                                     if(!isset($_SESSION['MaND'])){
-                                        echo 'Đăng nhập để sử dụng các chức năng.';
+                                        echo '<li class="nav-item ms-3">Đăng nhập để sử dụng các chức năng</li>';
                                     }
                                     else{
                                         if ($_SESSION['QuyenHan']==2){  
                                             echo 
                                             '<li class="nav-item ms-3">
-                                                <a class="nav-link" href="#">Quản lý đồ uống</a>
-                                            </li>
-                                            <li class="nav-item ms-3">
-                                                <a class="nav-link" href="#">Quản lý món ăn</a>
-                                            </li>
-                                            <li class="nav-item ms-3">
-                                                <a class="nav-link" href="#">Quản lý cà phê</a>
+                                                <a class="nav-link" href="#">Thêm món</a>
                                             </li>';
                                         }
                                         else if ($_SESSION['QuyenHan']==1){
@@ -111,7 +105,7 @@ include_once "thuvien.php";
                                     <h3>Hồ sơ cá nhân</h3>
                                     <?php
                                     if(!isset($_SESSION['MaND'])){
-                                        echo 'Đăng nhập để sử dụng các chức năng.';
+                                        echo '<li class="nav-item ms-3">Đăng nhập để sử dụng các chức năng</li>';
                                     }
                                     else{
                                         echo
@@ -139,6 +133,7 @@ include_once "thuvien.php";
             <div class="container bg-white">
                 <footer class="py-4">
                     <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-2 border-top text-dark">
+                        <a class="nav-link" href="/DoAn/DoAn/TrangChu/index.php?do=home"><i class="bi bi-chevron-left"></i>Quay về trang mua sắm</a>
                         <p>© 2024 Bản quyền thuộc về Kohi Coffee.</p>
                         <div>
                             <img src="images/logotbbct.png" width="100px">
