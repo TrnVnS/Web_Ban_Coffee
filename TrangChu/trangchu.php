@@ -53,7 +53,7 @@
                 <div class="container justify-content-end">
                     <div class="navbar" id="navbarNav">
                         <ul class="navbar-nav">
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="btn btn-outline-light rounded-pill" href="#">
                                     <i class="bi bi-cart"></i> Giỏ hàng
                                 </a>
@@ -63,7 +63,36 @@
                             </li>
                             <li class="nav-item ms-3 me-3">
                                 <a class="btn btn-light rounded-pill" href="trangchu.php?do=login">Đăng nhập</a>
-                            </li>
+                            </li> -->
+
+                            <?php
+					        //hiện menu quản lý
+                                if(!isset($_SESSION['MaNguoiDung']))
+                                {
+                                    echo '<li class="nav-item ms-3">';
+                                        echo '<a class="btn btn-outline-light rounded-pill" href="trangchu.php?do=register">Đăng ký</a>';
+                                    echo '</li>';
+                                    echo '<li class="nav-item ms-3 me-3">';
+                                        echo '<a class="btn btn-light rounded-pill" href="trangchu.php?do=login">Đăng nhập</a>';
+                                    echo '</li>';
+                                    // echo '<h3>Quản lý</h3>';
+                                    //     echo '<ul>';
+                                    //         echo '<li><a href="index.php?do=dangnhap">Đăng nhập</a></li>';
+                                    //         echo '<li><a href="index.php?do=dangky">Đăng ký</a></li>';
+                                    //     echo '</ul>';
+                                }
+                                else
+                                {
+                                    echo '<li class="nav-item">';
+                                        echo '<a class="btn btn-outline-light rounded-pill" href="#">';
+                                            echo '<i class="bi bi-cart"></i> Giỏ hàng';
+                                        echo '</a>';
+                                    echo '</li>';
+                                    echo '<li class="nav-item ms-3">';
+                                        echo '<a class="btn btn-outline-light rounded-pill" href="#">Đăng xuất</a>';
+                                    echo '</li>';
+                                }
+                            ?>
                         </ul>
                     </div>
                 </div>
