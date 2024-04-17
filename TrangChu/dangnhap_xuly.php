@@ -15,7 +15,7 @@
 		$MatKhau = md5($MatKhau);
 		
 		// Kiểm tra người dùng có tồn tại không
-		$sql_kiemtra = "SELECT * from nguoidung WHERE TenDangNhap = '$TenDangNhap' AND MatKhau = '$MatKhau'";	
+		$sql_kiemtra = "SELECT * FROM nguoidung WHERE TenDangNhap = '$TenDangNhap' AND MatKhau = '$MatKhau'";	
 		
 		
 		$danhsach = $connect->query($sql_kiemtra);
