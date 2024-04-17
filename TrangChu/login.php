@@ -1,5 +1,5 @@
 <div class="d-flex justify-content-center m-5">
-    <form class="row g-1" action="trangchu.php?do=dangnhap_xuly" method="post">
+    <form class="row g-1" action="index.php?do=dangnhap_xuly" method="post">
         <div class="flex justify-center items-center text-center px-5">
             <h1>Đăng nhập</h1>
         </div>
@@ -18,7 +18,7 @@
             <input type="submit" class="btn btn-outline-dark rounded-pill" value="Đăng nhập">
         </div>
         <div class="flex justify-center items-center text-center mt-3 border-top">
-            Chưa có tài khoản? <a class="link" href="trangchu.php?do=register">Đăng ký</a> ngay!
+            Chưa có tài khoản? <a class="link" href="index.php?do=register">Đăng ký</a> ngay!
         </div> 
     </form>
 </div>

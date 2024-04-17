@@ -36,16 +36,16 @@
                     <div class="navbar">
                         <ul class="nav nav-underline">
                             <li class="nav-item ms-3">
-                                <a class="nav-link text-light" aria-current="page" href="trangchu.php?do=home">Trang chủ</a>
+                                <a class="nav-link text-light" aria-current="page" href="index.php?do=home">Trang chủ</a>
                             </li>
                             <li class="nav-item ms-3">
-                                <a class="nav-link text-light" href="trangchu.php?do=thuc_uong">Thức uống</a>
+                                <a class="nav-link text-light" href="index.php?do=thuc_uong">Thức uống</a>
                             </li>
                             <li class="nav-item ms-3">
-                                <a class="nav-link text-light" href="trangchu.php?do=mon_an">Món ăn</a>
+                                <a class="nav-link text-light" href="index.php?do=mon_an">Món ăn</a>
                             </li>
                             <li class="nav-item ms-3">
-                                <a class="nav-link text-light" href="trangchu.php?do=ca_phe">Cà phê</a>
+                                <a class="nav-link text-light" href="index.php?do=ca_phe">Cà phê</a>
                             </li>
                         </ul>
                     </div>
@@ -53,33 +53,16 @@
                 <div class="container justify-content-end">
                     <div class="navbar" id="navbarNav">
                         <ul class="navbar-nav">
-                            <!-- <li class="nav-item">
-                                <a class="btn btn-outline-light rounded-pill" href="#">
-                                    <i class="bi bi-cart"></i> Giỏ hàng
-                                </a>
-                            </li>
-                            <li class="nav-item ms-3">
-                                <a class="btn btn-outline-light rounded-pill" href="trangchu.php?do=register">Đăng ký</a>
-                            </li>
-                            <li class="nav-item ms-3 me-3">
-                                <a class="btn btn-light rounded-pill" href="trangchu.php?do=login">Đăng nhập</a>
-                            </li> -->
-
                             <?php
 					        //hiện menu quản lý
                                 if(!isset($_SESSION['MaND']))
                                 {
                                     echo '<li class="nav-item ms-3">';
-                                        echo '<a class="btn btn-outline-light rounded-pill" href="trangchu.php?do=register">Đăng ký</a>';
+                                        echo '<a class="btn btn-outline-light rounded-pill" href="index.php?do=register">Đăng ký</a>';
                                     echo '</li>';
                                     echo '<li class="nav-item ms-3 me-3">';
-                                        echo '<a class="btn btn-light rounded-pill" href="trangchu.php?do=login">Đăng nhập</a>';
+                                        echo '<a class="btn btn-light rounded-pill" href="index.php?do=login">Đăng nhập</a>';
                                     echo '</li>';
-                                    // echo '<h3>Quản lý</h3>';
-                                    //     echo '<ul>';
-                                    //         echo '<li><a href="index.php?do=dangnhap">Đăng nhập</a></li>';
-                                    //         echo '<li><a href="index.php?do=dangky">Đăng ký</a></li>';
-                                    //     echo '</ul>';
                                 }
                                 else
                                 {
@@ -89,7 +72,7 @@
                                         echo '</a>';
                                     echo '</li>';
                                     echo '<li class="nav-item ms-3">';
-                                        echo '<a class="btn btn-outline-light rounded-pill" href="#">Đăng xuất</a>';
+                                        echo '<a class="btn btn-outline-light rounded-pill" href="index.php?do=dangxuat_xuly">Đăng xuất</a>';
                                     echo '</li>';
                                 }
                             ?>

@@ -36,7 +36,7 @@
 				$_SESSION['HoTen'] = $dong['TenNguoiDung'];
 				
 				// Chuyển hướng về trang index.php
-				header("Location: trangchu.php");
+				header("Location: index.php");
 			}
 			else
 			{
