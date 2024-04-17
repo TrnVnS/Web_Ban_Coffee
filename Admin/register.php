@@ -10,7 +10,7 @@
             </div>
             <div class="mb-3">
                 <label for="txt_TenDN" class="form-label">Tên đăng nhập</label>
-                <input type="email" class="form-control" id="txt_TenDN">
+                <input type="text" class="form-control" id="txt_TenDN">
             </div>
             <div class="mb-3">
                 <label for="txt_MK" class="form-label">Mật khẩu</label>
