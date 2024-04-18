@@ -46,4 +46,3 @@
         </div>
     </div>
 </div>
-<a href="index.php?do=register"><input type="submit" value="thử"></a>
