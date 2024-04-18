@@ -67,7 +67,7 @@
                                 else
                                 {
                                     echo '<li class="nav-item">';
-                                        echo '<a class="btn btn-outline-light rounded-pill" href="#">';
+                                        echo '<a class="btn btn-outline-light rounded-pill" href="index.php?do=giohang&id='. $_SESSION['MaND'].'">';
                                             echo '<i class="bi bi-cart"></i> Giỏ hàng';
                                         echo '</a>';
                                     echo '</li>';
@@ -83,15 +83,16 @@
         </header>
         <!--Content-->
         <div id="content">
-            <?php
-						
-				$do = isset($_GET['do']) ? $_GET['do'] : "home";
-						
-				include $do . ".php";
-			?>    
+            <div>
+                <?php
+					$do = isset($_GET['do']) ? $_GET['do'] : "home";
+                                
+                    include $do . ".php";
+                ?>  
+            </div>  
         </div>
         <!--Footer-->
-        <div class="container bg-white">
+        
             <footer class="py-4">
                 <div class="row border-top py-4 my-4">
                     <div class="col-5 col-md-3 mb-3">
@@ -157,6 +158,6 @@
                     </div>
                 </div>
             </footer>
-        </div>
+   
     </body>
 </html>

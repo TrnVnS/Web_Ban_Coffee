@@ -32,7 +32,7 @@
 			$MatKhau = md5($MatKhau);
 			
 			$sql_them = "INSERT INTO `nguoidung`(`TenNguoiDung`, `TenDangNhap`, `MatKhau`, `QuyenHan`, `Khoa`)
-					VALUES ('$HoVaTen', '$TenDangNhap', '$MatKhau', 2, 0)";
+					VALUES ('$HoVaTen', '$TenDangNhap', '$MatKhau', 3, 0)";
 			$themnd = $connect->query($sql_them);
 			
 			if($themnd)

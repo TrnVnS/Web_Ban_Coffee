@@ -1,5 +1,5 @@
 <div class="d-flex justify-content-center m-5">
-    <form class="row g-1" action="trangchu.php?do=dangky_xuly" method="post">
+    <form class="row g-1" action="index.php?do=dangky_xuly" method="post">
         <div class="flex justify-center items-center text-center px-5 border-bottom">
             <h1>Đăng ký</h1>
         </div>
