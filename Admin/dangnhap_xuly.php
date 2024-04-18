@@ -20,14 +20,20 @@ else {
 	}
 	$dong = $danhsach->fetch_array(MYSQLI_ASSOC);
 	if ($dong) {
-		if ($dong['Khoa'] == 0) {
-			// Đăng ký SESSION
-			$_SESSION['MaND'] = $dong['MaNguoiDung'];
-			$_SESSION['HoTen'] = $dong['TenNguoiDung'];
-			// Chuyển hướng về trang index.php
-			header("Location: index.php");
-		} else {
-			ThongBaoLoi("Người dùng đã bị khóa tài khoản!");
+		if($dong['QuyenHan']==3){
+			ThongBaoLoi("Khách hàng không được quyền đăng nhập vào hệ thống quản lý!");
+		}
+		else{
+			if ($dong['Khoa'] == 0) {
+				// Đăng ký SESSION
+				$_SESSION['MaND'] = $dong['MaNguoiDung'];
+				$_SESSION['HoTen'] = $dong['TenNguoiDung'];
+				$_SESSION['QuyenHan'] = $dong['QuyenHan'];
+				// Chuyển hướng về trang index.php
+				header("Location: index.php");
+			} else {
+				ThongBaoLoi("Người dùng đã bị khóa tài khoản!");
+			}
 		}
 	} else {
 		ThongBaoLoi("Tên đăng nhập hoặc mật khẩu không chính xác!");
