@@ -11,6 +11,7 @@ body{
 }
 #content{
     padding: 20px;
+    margin-left: 100px;
 }
 p.ad_content{
     font-size: 18pt;
@@ -19,17 +20,14 @@ p.ad_content{
 {
     width: 250px;
     height: 260px;	
-    background-color: aqua;
-    text-align: center;
     float: left;
     margin: 20px;
+    
 }
-footer{
-    clear: both;
-}
-/* .card {
+
+.card {
     width: 234px;
-    height: 200px;
+    height: 300px;
     margin: 8px;
     padding: auto;
     border-radius: 5px;
@@ -38,6 +36,23 @@ footer{
     transition: transform 0.3s;
     text-align: center;
 	border: 1px solid red;
-	float: left;
-} */
+	float: left; 
+}
+
+table{
+    margin-left: 300px;
+    text-align: center;
+    border: solid black;
+}   
+
+td{
+    padding: 5px;
+    border: solid rgb(120, 108, 91);
+}
+
+
+footer{
+    margin: 50px;
+    clear: both;
+}
 

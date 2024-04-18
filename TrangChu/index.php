@@ -19,48 +19,53 @@ include_once "thuvien.php";
     <script type="text/javascript" src="js\script.js"></script>
 </head>
 
-<body>
-    <!--Header-->
-    <header>
-        <div id="banner"></div>
-        <nav class="navbar navbar-expand bg-dark">
-            <div class="container justify-content-start">
-                <a class="navbar-brand ms-2" href="">
-                    <img src="images/Logo.png" width="50px">
-                </a>
-                <ul class="nav nav-underline">
-                    <li class="nav-item ms-3">
-                        <a class="nav-link text-light" aria-current="page" href="index.php?do=home">Trang chủ</a>
-                    </li>
-                    <li class="nav-item ms-3">
-                        <a class="nav-link text-light" href="index.php?do=thuc_uong">Thức uống</a>
-                    </li>
-                    <li class="nav-item ms-3">
-                        <a class="nav-link text-light" href="index.php?do=mon_an">Món ăn</a>
-                    </li>
-                    <li class="nav-item ms-3">
-                        <a class="nav-link text-light" href="index.php?do=ca_phe">Cà phê</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="container justify-content-end">
-                <div class="navbar">
-                    <ul class="navbar-nav">
-                    <?php
-                    if (!isset($_SESSION['MaND'])) {
-                        echo '<li class="nav-item ms-3">';
-                        echo '<a class="btn btn-outline-light rounded-pill" href="index.php?do=register">Đăng ký</a>';
-                        echo '</li>';
-                        echo '<li class="nav-item ms-3 me-3">';
-                        echo '<a class="btn btn-light rounded-pill" href="index.php?do=login">Đăng nhập</a>';
-                        echo '</li>';
-                    } else {
-                        echo '<li class="nav-item">';
-                        echo '<a class="btn btn-outline-light rounded-pill" href="index.php?do=giohang">';
-                        echo '<i class="bi bi-cart"></i> Giỏ hàng';
-                        echo '</a>';
-                        echo '</li>';
-                        echo '<button class="btn btn-outline-light rounded-pill dropdown-toggle ms-3" data-bs-toggle="dropdown" aria-expanded="false">
+    <body>
+        <!--Header-->
+        <header>
+            <div id="banner"></div>
+            <nav class="navbar navbar-expand bg-dark">
+                <div class="container justify-content-start">
+                    <a class="navbar-brand ms-2" href="">
+                        <img src="images/Logo.png" width="50px">
+                    </a>
+                    <div class="navbar">
+                        <ul class="nav nav-underline">
+                            <li class="nav-item ms-3">
+                                <a class="nav-link text-light" aria-current="page" href="index.php?do=home">Trang chủ</a>
+                            </li>
+                            <li class="nav-item ms-3">
+                                <a class="nav-link text-light" href="index.php?do=thuc_uong">Thức uống</a>
+                            </li>
+                            <li class="nav-item ms-3">
+                                <a class="nav-link text-light" href="index.php?do=mon_an">Món ăn</a>
+                            </li>
+                            <li class="nav-item ms-3">
+                                <a class="nav-link text-light" href="index.php?do=ca_phe">Cà phê</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container justify-content-end">
+                    <div class="navbar" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <?php
+                                if(!isset($_SESSION['MaND']))
+                                {
+                                    echo '<li class="nav-item ms-3">';
+                                        echo '<a class="btn btn-outline-light rounded-pill" href="index.php?do=register">Đăng ký</a>';
+                                    echo '</li>';
+                                    echo '<li class="nav-item ms-3 me-3">';
+                                        echo '<a class="btn btn-light rounded-pill" href="index.php?do=login">Đăng nhập</a>';
+                                    echo '</li>';
+                                }
+                                else
+                                {
+                                    echo '<li class="nav-item">';
+                                        echo '<a class="btn btn-outline-light rounded-pill" href="index.php?do=giohang&id='.$_SESSION['MaND'].'">';
+                                            echo '<i class="bi bi-cart"></i> Giỏ hàng';
+                                        echo '</a>';
+                                    echo '</li>';
+                                    echo '<button class="btn btn-outline-light rounded-pill dropdown-toggle ms-3" data-bs-toggle="dropdown" aria-expanded="false">
                                         <i class="bi bi-person-fill-gear"></i>
                                         ' . $_SESSION['HoTen'] . '
                                     </button>
@@ -68,38 +73,40 @@ include_once "thuvien.php";
                                         <li><a class="dropdown-item" href="index.php?do=hosocanhan">Hồ sơ</a></li>
                                         <li><a class="dropdown-item" href="index.php?do=thaydoimk">Đổi mật khẩu</a></li>
                                     </ul>';
-                        echo '<li class="nav-item ms-3">';
-                        echo '<a class="btn btn-outline-light rounded-pill" href="index.php?do=dangxuat_xuly">Đăng xuất</a>';
-                        echo '</li>';
-                    }
-                    ?>
-                    </ul>
+                                    echo '<li class="nav-item ms-3">';
+                                        echo '<a class="btn btn-outline-light rounded-pill" href="index.php?do=dangxuat_xuly">Đăng xuất</a>';
+                                    echo '</li>';
+                                }
+                            ?>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </header>
-    <!--Content-->
-    <div id="content">
-        <?php
-        $do = isset($_GET['do']) ? $_GET['do'] : "home";
-        include $do . ".php";
-        ?>
-    </div>
-    <!--Footer-->
-    <div class="container bg-white">
-        <footer class="py-4">
-            <div class="row border-top py-4 my-4">
-                <div class="col-5 col-md-3 mb-3">
-                    <h5>Về chúng tôi</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Trang chủ</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Về chúng tôi</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">FAQs</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Hệ thống cửa hàng</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Tuyển dụng</a></li>
-                        <li class="nav-item mb-2"><a href="/DoAn/DoAn/Admin/index.php?do=home" class="nav-link p-0 text-dark">Trang quản lý</a></li>
-                    </ul>
-                </div>
+            </nav>
+        </header>
+        <!--Content-->
+        <div id="content">
+            <?php
+						
+				$do = isset($_GET['do']) ? $_GET['do'] : "home";
+						
+				include $do . ".php";
+			?>    
+        </div>
+        <!--Footer-->
+        <div class="container bg-white">
+            <footer class="py-4">
+                <div class="row border-top py-4 my-4">
+                    <div class="col-5 col-md-3 mb-3">
+                        <h5>Về chúng tôi</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Trang chủ</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Về chúng tôi</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">FAQs</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Hệ thống cửa hàng</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Tuyển dụng</a></li>
+                            <li class="nav-item mb-2"><a href="/DoAn/DoAn/Admin/index.php?do=home" class="nav-link p-0 text-dark">Trang quản lý</a></li>
+                        </ul>
+                    </div>
 
                 <div class="col-5 col-md-3 mb-3">
                     <h5>Liên hệ với chúng tôi</h5>
@@ -150,15 +157,14 @@ include_once "thuvien.php";
                 </div>
             </div>
 
-            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-2 border-top text-dark">
-                <p>© 2024 Bản quyền thuộc về Kohi Coffee.</p>
-                <div>
-                    <img src="images/logotbbct.png" width="100px">
-                    <img src="images/logodmca.png" width="75px">
+                <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-2 border-top text-dark">
+                    <p>© 2024 Bản quyền thuộc về Kohi Coffee.</p>
+                    <div>
+                        <img src="images/logotbbct.png" width="100px">
+                        <img src="images/logodmca.png" width="75px">
+                    </div>
                 </div>
-            </div>
-        </footer>
-    </div>
-</body>
-
+            </footer>
+        </div>
+    </body>
 </html>
