@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Trang chủ</title>
+        <title>Kohi Coffee</title>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -64,7 +64,7 @@
                                 else
                                 {
                                     echo '<li class="nav-item">';
-                                        echo '<a class="btn btn-outline-light rounded-pill" href="#">';
+                                        echo '<a class="btn btn-outline-light rounded-pill" href="index.php?do=giohang">';
                                             echo '<i class="bi bi-cart"></i> Giỏ hàng';
                                         echo '</a>';
                                     echo '</li>';
@@ -73,8 +73,8 @@
                                         '.$_SESSION['HoTen'].'
                                     </button>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="index.php?do=hoso">Hồ sơ</a></li>
-                                        <li><a class="dropdown-item" href="index.php?do=doimk">Đổi mật khẩu</a></li>
+                                        <li><a class="dropdown-item" href="index.php?do=hosocanhan">Hồ sơ</a></li>
+                                        <li><a class="dropdown-item" href="index.php?do=thaydoimk">Đổi mật khẩu</a></li>
                                     </ul>';
                                     echo '<li class="nav-item ms-3">';
                                         echo '<a class="btn btn-outline-light rounded-pill" href="index.php?do=dangxuat_xuly">Đăng xuất</a>';

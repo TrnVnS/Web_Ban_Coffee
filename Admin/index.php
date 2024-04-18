@@ -29,19 +29,17 @@ include_once "thuvien.php";
                 <a class="navbar-brand ms-2" href="index.php?do=home">
                     <img src="images/Logo.png" width="50px">
                 </a>
-                <div class="text-light ms-3" style="font-size: 20pt;">Trang quản lý</div>
+                <p class="text-light ms-3" style="font-size: 20pt;">Trang quản lý</div>
             </div>
             <div class="container justify-content-end">
                 <div class="navbar" id="navbarNav">
                     <ul class="navbar-nav">
                         <?php
                             if (!isset($_SESSION['MaND'])) {
-                                echo '<li class="nav-item ms-3">
-                                        <a class="btn btn-outline-light rounded-pill" href="index.php?do=register">Đăng ký</a>
-                                    </li>
-                                    <li class="nav-item ms-3 me-3">
-                                        <a class="btn btn-light rounded-pill" href="index.php?do=login">Đăng nhập</a>
-                                    </li>';
+                                echo 
+                                '<li class="nav-item ms-3 me-3">
+                                    <a class="btn btn-light rounded-pill" href="index.php?do=login">Đăng nhập</a>
+                                </li>';
                             }
                             else if(isset($_SESSION['MaND'])) {
                                 echo '<li class="nav-item ms-3">
@@ -50,8 +48,8 @@ include_once "thuvien.php";
                                         '.$_SESSION['HoTen'].'
                                     </button>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="index.php?do=hoso">Hồ sơ</a></li>
-                                        <li><a class="dropdown-item" href="index.php?do=doimk">Đổi mật khẩu</a></li>
+                                        <li><a class="dropdown-item" href="index.php?do=hosocanhan">Hồ sơ</a></li>
+                                        <li><a class="dropdown-item" href="index.php?do=thaydoimk">Đổi mật khẩu</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item ms-3 me-3">
@@ -82,22 +80,22 @@ include_once "thuvien.php";
                                         if ($_SESSION['QuyenHan']==2){  
                                             echo 
                                             '<li class="nav-item ms-3">
-                                                <a class="nav-link" href="#">Thêm món</a>
+                                                <a class="nav-link" href="index.php?do=themmon">Thêm món</a>
                                             </li>';
                                         }
                                         else if ($_SESSION['QuyenHan']==1){
                                             echo
                                             '<li class="nav-item ms-3">
-                                                <a class="nav-link" href="#">Quản lý đồ uống</a>
+                                                <a class="nav-link" href="index.php?do=qldouong">Quản lý đồ uống</a>
                                             </li>
                                             <li class="nav-item ms-3">
-                                                <a class="nav-link" href="#">Quản lý món ăn</a>
+                                                <a class="nav-link" href="index.php?do=qlmonan">Quản lý món ăn</a>
                                             </li>
                                             <li class="nav-item ms-3">
-                                                <a class="nav-link" href="#">Quản lý cà phê</a>
+                                                <a class="nav-link" href="index.php?do=qlcaphe">Quản lý cà phê</a>
                                             </li>
                                             <li class="nav-item ms-3">
-                                                <a class="nav-link" href="#">Quản lý người dùng</a>
+                                                <a class="nav-link" href="index.php?do=qlnguoidung">Quản lý người dùng</a>
                                             </li>';
                                         }
                                     }
@@ -110,10 +108,10 @@ include_once "thuvien.php";
                                     else{
                                         echo
                                         '<li class="nav-item ms-3">
-                                            <a class="nav-link" href="#">Thông tin tài khoản</a>
+                                            <a class="nav-link" href="index.php?do=hosocanhan">Thông tin tài khoản</a>
                                         </li>
                                         <li class="nav-item ms-3">
-                                            <a class="nav-link" href="#">Đổi mật khẩu</a>
+                                            <a class="nav-link" href="index.php?do=thaydoimk">Đổi mật khẩu</a>
                                         </li>';
                                     }
                                     ?>
