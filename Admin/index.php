@@ -33,52 +33,31 @@ include_once "thuvien.php";
             </div>
             <div class="container justify-content-end">
                 <div class="navbar">
-                <ul class="navbar-nav me-5">
-                                    <h3>Quản lý</h3>
-                                    <?php
-                                    if(!isset($_SESSION['MaND'])){
-                                        echo '<li class="nav-item ms-3">Đăng nhập để sử dụng các chức năng</li>';
-                                    }
-                                    else{
-                                        if ($_SESSION['QuyenHan']==2){  
-                                            echo 
-                                            '<li class="nav-item ms-3">
-                                                <a class="nav-link" href="index.php?do=themmon">Thêm món</a>
-                                            </li>';
-                                        }
-                                        else if ($_SESSION['QuyenHan']==1){
-                                            echo
-                                            '<li class="nav-item ms-3">
-                                                <a class="nav-link" href="index.php?do=qldouong">Quản lý đồ uống</a>
-                                            </li>
-                                            <li class="nav-item ms-3">
-                                                <a class="nav-link" href="index.php?do=qlmonan">Quản lý món ăn</a>
-                                            </li>
-                                            <li class="nav-item ms-3">
-                                                <a class="nav-link" href="index.php?do=qlcaphe">Quản lý cà phê</a>
-                                            </li>
-                                            <li class="nav-item ms-3">
-                                                <a class="nav-link" href="index.php?do=qlnguoidung">Quản lý người dùng</a>
-                                            </li>';
-                                        }
-                                    }
-                                    ?>
-                                    <h3>Hồ sơ cá nhân</h3>
-                                    <?php
-                                    if(!isset($_SESSION['MaND'])){
-                                        echo '<li class="nav-item ms-3">Đăng nhập để sử dụng các chức năng</li>';
-                                    }
-                                    else{
-                                        echo
-                                        '<li class="nav-item ms-3">
-                                            <a class="nav-link" href="index.php?do=hosocanhan">Thông tin tài khoản</a>
-                                        </li>
-                                        <li class="nav-item ms-3">
-                                            <a class="nav-link" href="index.php?do=thaydoimk">Đổi mật khẩu</a>
-                                        </li>';
-                                    }
-                                    ?>
-                                </ul>
+                    <ul class="navbar-nav">
+                        <?php
+                            if (!isset($_SESSION['MaND'])) {
+                                echo 
+                                '<li class="nav-item ms-3 me-3">
+                                    <a class="btn btn-light rounded-pill" href="index.php?do=login">Đăng nhập</a>
+                                </li>';
+                            }
+                            else if(isset($_SESSION['MaND'])) {
+                                echo '<li class="nav-item ms-3">
+                                    <button class="btn btn-outline-light rounded-pill dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-person-fill-gear"></i>
+                                        '.$_SESSION['HoTen'].'
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="index.php?do=hosocanhan">Hồ sơ</a></li>
+                                        <li><a class="dropdown-item" href="index.php?do=thaydoimk">Đổi mật khẩu</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item ms-3 me-3">
+                                    <a class="btn btn-outline-light rounded-pill" href="index.php?do=dangxuat_xuly">Đăng xuất</a>
+                                </li>';
+                            }
+                        ?>
+                    </ul>
                 </div>
             </div>
         </nav>
