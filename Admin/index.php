@@ -32,7 +32,7 @@ include_once "thuvien.php";
                 <p class="text-light ms-3" style="font-size: 20pt;">Trang quản lý</div>
             </div>
             <div class="container justify-content-end">
-                <div class="navbar" id="navbarNav">
+                <div class="navbar">
                     <ul class="navbar-nav">
                         <?php
                             if (!isset($_SESSION['MaND'])) {

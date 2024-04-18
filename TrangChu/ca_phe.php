@@ -29,8 +29,10 @@
 							//hiện thông tin mua và thêm vào giỏ hàng
 							if(isset($_SESSION['MaND']))
 							{
-								echo "<a>Mua</a>";
-								echo "<a href='index.php?do=giohang_them&id=" . $row["MaDS"] . "'>Thêm vào giỏ hàng</a>";
+								echo 
+								'<a href="index.php?do=giohang_them&id=' . $row["MaDS"] . '" class="btn btn-dark rounded-pill">
+									<i class="bi bi-cart"></i> Thêm vào giỏ
+								</a>';
 							}		
 						echo "</div>";					
 					echo "</div>";
