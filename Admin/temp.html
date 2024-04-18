@@ -50,36 +50,78 @@
     </header>
     <!--Content-->
     <div class="container">
-            <div class="card mb-3" style="width: 20rem;">
-                <img src="images/Espresso.jpg" class="card-img-top">
-                <div class="card-body">
-                    <h2 class="card-title">Espresso</h3>
-                    <h4 class="card-subtitle">$2.99</h3>
-                </div>
-                <div class="card-body border-top text-center">
-                    <a href="#" class="btn btn-outline-dark rounded-pill">
-                        <i class="bi bi-info-circle"></i> Chi tiết
-                    </a>
-                    <a href="#" class="btn btn-dark rounded-pill">
-                        <i class="bi bi-cart"></i> Thêm vào giỏ
-                    </a>
+        <div class="row">
+            <div class="col-4">
+                <nav class="navbar mt-3">
+                    <div class="container justify-content-start">
+                        <div class="navbar border-end">
+                            <ul class="navbar-nav me-5">
+                                <h3>Quản lý</h3>
+                                        <li class="nav-item ms-3">
+                                            <a class="nav-link" href="index.php?do=qldouong">Quản lý đồ uống</a>
+                                        </li>
+                                        <li class="nav-item ms-3">
+                                            <a class="nav-link" href="index.php?do=qlmonan">Quản lý món ăn</a>
+                                        </li>
+                                        <li class="nav-item ms-3">
+                                            <a class="nav-link" href="index.php?do=qlcaphe">Quản lý cà phê</a>
+                                        </li>
+                                        <li class="nav-item ms-3">
+                                            <a class="nav-link" href="index.php?do=qlnguoidung">Quản lý người dùng</a>
+                                        </li>
+                                <h3>Hồ sơ cá nhân</h3>
+                                <li class="nav-item ms-3">
+                                        <a class="nav-link" href="index.php?do=hosocanhan">Thông tin tài khoản</a>
+                                    </li>
+                                    <li class="nav-item ms-3">
+                                        <a class="nav-link" href="index.php?do=thaydoimk">Đổi mật khẩu</a>
+                                    </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-8 mt-4">
+                <div class="d-flex justify-content-center m-5">
+                    <form class="row g-1" action="index.php?do=dangky_xuly" method="post">
+                        <div class="flex justify-content-start mt-2">
+                            <div class="mb-3">
+                                <label for="txt_TenND" class="form-label">Tên người dùng</label>
+                                <input type="text" class="form-control" placeholder="Nguyễn Văn A" name="HoVaTen">
+                            </div>
+                            <div class="mb-3">
+                                <label for="txt_TenDN" class="form-label">Tên đăng nhập</label>
+                                <input type="text" class="form-control" name="TenDangNhap">
+                            </div>
+                            <div class="mb-3">
+                                <label for="txt_MK" class="form-label">Mật khẩu</label>
+                                <input type="password" id="txt_MK" class="form-control" aria-describedby="passwordHelpBlock" name="MatKhau">
+                            </div>
+                            <div class="mb-3">
+                                <label for="txt_MK" class="form-label">Xác nhận mật khẩu</label>
+                                <input type="password" id="txt_MK" class="form-control" aria-describedby="passwordHelpBlock" name="XNMatKhau">
+                            </div>
+                        </div>
+                        <div class="flex justify-center items-center text-center mt-3">
+                            <input type="submit" class="btn btn-outline-dark rounded-pill" value="Đăng ký">
+                        </div>
+                    </form>
                 </div>
             </div>
-            <div class="card mb-3" style="width: 20rem;">
-                <img src="images/Espresso.jpg" class="card-img-top">
-                <div class="card-body">
-                    <h2 class="card-title">Espresso</h3>
-                    <h4 class="card-subtitle">$2.99</h3>
+        </div>
+        <!--Footer-->
+        <div class="container bg-white">
+            <footer class="py-4">
+                <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-2 border-top text-dark">
+                    <a class="nav-link" href="/DoAn/DoAn/TrangChu/index.php?do=home"><i class="bi bi-chevron-left"></i>Quay về trang mua sắm</a>
+                    <p>© 2024 Bản quyền thuộc về Kohi Coffee.</p>
+                    <div>
+                        <img src="images/logotbbct.png" width="100px">
+                        <img src="images/logodmca.png" width="75px">
+                    </div>
                 </div>
-                <div class="card-body border-top text-center">
-                    <a href="#" class="btn btn-outline-dark rounded-pill">
-                        <i class="bi bi-info-circle"></i> Chi tiết
-                    </a>
-                    <a href="#" class="btn btn-dark rounded-pill">
-                        <i class="bi bi-cart"></i> Thêm vào giỏ
-                    </a>
-                </div>
-            </div>
+            </footer>
+        </div>
     </div>
     <!--Footer-->
     <div class="container bg-white">

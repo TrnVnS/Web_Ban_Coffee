@@ -71,8 +71,13 @@ include_once "thuvien.php";
                                     </button>
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="index.php?do=hosocanhan">Hồ sơ</a></li>
-                                        <li><a class="dropdown-item" href="index.php?do=thaydoimk">Đổi mật khẩu</a></li>
-                                    </ul>';
+                                        <li><a class="dropdown-item" href="index.php?do=thaydoimk">Đổi mật khẩu</a></li>';
+                                        if($_SESSION['Quyen']!=3){
+                                            echo 
+                                            '<li><hr class="dropdown-divider"></li>
+                                            <li><a class="dropdown-item" href="/DoAn/DoAn/Admin/index.php?do=home">Trang quản lý</a></li>';
+                                        }
+                                    echo'</ul>';
                                     echo '<li class="nav-item ms-3">';
                                         echo '<a class="btn btn-outline-light rounded-pill" href="index.php?do=dangxuat_xuly">Đăng xuất</a>';
                                     echo '</li>';
@@ -104,7 +109,6 @@ include_once "thuvien.php";
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">FAQs</a></li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Hệ thống cửa hàng</a></li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Tuyển dụng</a></li>
-                            <li class="nav-item mb-2"><a href="/DoAn/DoAn/Admin/index.php?do=home" class="nav-link p-0 text-dark">Trang quản lý</a></li>
                         </ul>
                     </div>
 

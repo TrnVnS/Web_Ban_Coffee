@@ -11,7 +11,6 @@ body{
 }
 #content{
     padding: 20px;
-    margin-left: 100px;
 }
 p.ad_content{
     font-size: 18pt;
@@ -49,7 +48,6 @@ td{
     padding: 5px;
     border: solid rgb(120, 108, 91);
 }
-
 
 footer{
     margin: 50px;

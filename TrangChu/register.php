@@ -27,7 +27,7 @@
                 </label>
             </div>
         </div>
-        <div class="flex justify-center items-center text-center m-3 px-5">
+        <div class="flex justify-center items-center text-center mt-3">
             <input type="submit" class="btn btn-outline-dark rounded-pill" value="Đăng ký">
         </div>
     </form>

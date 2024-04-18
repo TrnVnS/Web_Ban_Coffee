@@ -24,6 +24,7 @@ else {
 			// Đăng ký SESSION
 			$_SESSION['MaND'] = $dong['MaNguoiDung'];
 			$_SESSION['HoTen'] = $dong['TenNguoiDung'];
+			$_SESSION['Quyen'] = $dong['QuyenHan'];
 			// Chuyển hướng về trang index.php
 			header("Location: index.php");
 		} else {

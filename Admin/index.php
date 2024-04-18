@@ -29,23 +29,23 @@ include_once "thuvien.php";
                 <a class="navbar-brand ms-2" href="index.php?do=home">
                     <img src="images/Logo.png" width="50px">
                 </a>
-                <p class="text-light ms-3" style="font-size: 20pt;">Trang quản lý</div>
+                <p class="text-light ms-3" style="font-size: 20pt;">Trang quản lý
+            </div>
             </div>
             <div class="container justify-content-end">
                 <div class="navbar">
                     <ul class="navbar-nav">
                         <?php
-                            if (!isset($_SESSION['MaND'])) {
-                                echo 
-                                '<li class="nav-item ms-3 me-3">
+                        if (!isset($_SESSION['MaND'])) {
+                            echo
+                            '<li class="nav-item ms-3 me-3">
                                     <a class="btn btn-light rounded-pill" href="index.php?do=login">Đăng nhập</a>
                                 </li>';
-                            }
-                            else if(isset($_SESSION['MaND'])) {
-                                echo '<li class="nav-item ms-3">
+                        } else if (isset($_SESSION['MaND'])) {
+                            echo '<li class="nav-item ms-3">
                                     <button class="btn btn-outline-light rounded-pill dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                         <i class="bi bi-person-fill-gear"></i>
-                                        '.$_SESSION['HoTen'].'
+                                        ' . $_SESSION['HoTen'] . '
                                     </button>
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="index.php?do=hosocanhan">Hồ sơ</a></li>
@@ -55,7 +55,7 @@ include_once "thuvien.php";
                                 <li class="nav-item ms-3 me-3">
                                     <a class="btn btn-outline-light rounded-pill" href="index.php?do=dangxuat_xuly">Đăng xuất</a>
                                 </li>';
-                            }
+                        }
                         ?>
                     </ul>
                 </div>
@@ -73,19 +73,20 @@ include_once "thuvien.php";
                                 <ul class="navbar-nav me-5">
                                     <h3>Quản lý</h3>
                                     <?php
-                                    if(!isset($_SESSION['MaND'])){
+                                    if (!isset($_SESSION['MaND'])) {
                                         echo '<li class="nav-item ms-3">Đăng nhập để sử dụng các chức năng</li>';
-                                    }
-                                    else{
-                                        if ($_SESSION['QuyenHan']==2){  
-                                            echo 
+                                    } else {
+                                        if ($_SESSION['QuyenHan'] == 2) {
+                                            echo
                                             '<li class="nav-item ms-3">
                                                 <a class="nav-link" href="index.php?do=themmon">Thêm món</a>
                                             </li>';
-                                        }
-                                        else if ($_SESSION['QuyenHan']==1){
+                                        } else if ($_SESSION['QuyenHan'] == 1) {
                                             echo
                                             '<li class="nav-item ms-3">
+                                                <a class="nav-link" href="index.php?do=themmon">Thêm món</a>
+                                            </li>
+                                            <li class="nav-item ms-3">
                                                 <a class="nav-link" href="index.php?do=qldouong">Quản lý đồ uống</a>
                                             </li>
                                             <li class="nav-item ms-3">
@@ -102,10 +103,9 @@ include_once "thuvien.php";
                                     ?>
                                     <h3>Hồ sơ cá nhân</h3>
                                     <?php
-                                    if(!isset($_SESSION['MaND'])){
+                                    if (!isset($_SESSION['MaND'])) {
                                         echo '<li class="nav-item ms-3">Đăng nhập để sử dụng các chức năng</li>';
-                                    }
-                                    else{
+                                    } else {
                                         echo
                                         '<li class="nav-item ms-3">
                                             <a class="nav-link" href="index.php?do=hosocanhan">Thông tin tài khoản</a>

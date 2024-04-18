@@ -45,7 +45,7 @@
                         
             ?>
             
-            </table>
+        </table>
 
 		<?php 
 			

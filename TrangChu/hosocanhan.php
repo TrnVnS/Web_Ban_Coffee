@@ -16,13 +16,13 @@ $dong = $danhsach->fetch_array(MYSQLI_ASSOC);
             <h1>Hồ sơ người dùng</h1>
         </div>
         <input type="hidden" value="<?php echo $_SESSION['MaND']; ?>" name="MaNguoiDung" />
-        <div class="mb-3 row">
+        <div class="mb-3">
             <label class="col-sm col-form-label">Tên đăng nhập</label>
             <div class="col-sm">
                 <input type="text" readonly class="form-control-plaintext" value="<?php echo $dong['TenDangNhap']; ?>" name="TenDangNhap">
             </div>
         </div>
-        <div class="mb-3 row">
+        <div class="mb-3">
             <label class="col-sm col-form-label">Tên người dùng </label>
             <div class="col-sm">
                 <input type="text" class="form-control" value="<?php echo $dong['TenNguoiDung']; ?>" name="HoVaTen">

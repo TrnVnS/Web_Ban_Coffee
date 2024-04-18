@@ -10,6 +10,7 @@ if (!$danhsach) {
 
 $dong = $danhsach->fetch_array(MYSQLI_ASSOC);
 ?>
+<h3>Thông tin tài khoản</h3>
 <form action="index.php?do=hosocanhan_xuly" method="post">
     <input type="hidden" value="<?php echo $_SESSION['MaND']; ?>" name="MaNguoiDung" />
     <div class="mb-3 row">
