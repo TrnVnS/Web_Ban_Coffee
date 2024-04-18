@@ -64,7 +64,7 @@
                                 else
                                 {
                                     echo '<li class="nav-item">';
-                                        echo '<a class="btn btn-outline-light rounded-pill" href="#">';
+                                        echo '<a class="btn btn-outline-light rounded-pill" href="index.php?do=giohang&id='.$_SESSION['MaND'].'">';
                                             echo '<i class="bi bi-cart"></i> Giỏ hàng';
                                         echo '</a>';
                                     echo '</li>';

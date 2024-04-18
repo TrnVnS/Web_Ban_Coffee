@@ -25,11 +25,11 @@ p.ad_content{
     
 }
 
-/* .card {
+.card {
     width: 234px;
     height: 300px;
-    /* margin: 8px;
-    padding: auto; */
+    margin: 8px;
+    padding: auto;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     overflow: hidden;
