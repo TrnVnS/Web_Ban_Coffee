@@ -12,8 +12,8 @@
                 echo '<tr>
                     <th colspan="2">THÔNG TIN ĐĂNG KÝ</th>
                 </tr>';
-                echo '<tr>
-                    <td width="30%">Họ và tên: </td>
+                    echo '<tr>
+                        <td width="30%">Họ và tên: </td>
                     <td width="70%">
                         ' . $row["TenNguoiDung"] .'
                     </td>

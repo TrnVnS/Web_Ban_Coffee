@@ -5,5 +5,5 @@
 	unset($_SESSION['QuyenHan']);
 	
 	// Chuyển hướng về trang index.php
-	header("Location: index.php");
+	header("Location: test.html");
 ?>
