@@ -85,7 +85,7 @@
                                                         <a class="nav-link" href="index.php?do=themmon">Thêm món</a>
                                                     </li>
                                                     <li class="nav-item ms-3">
-                                                        <a class="nav-link" href="#">Quản lý danh sách</a>
+                                                        <a class="nav-link" href="index.php?do=qldanhsach">Quản lý danh sách món</a>
                                                     </li>
                                                     <li class="nav-item ms-3">
                                                         <a class="nav-link" href="index.php?do=qlnguoidung">Quản lý người dùng</a>

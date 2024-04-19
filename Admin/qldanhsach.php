@@ -1,5 +1,5 @@
 <?php
-	$sql = "select * from danhsach where PhanLoai = 'đồ uống' ORDER by `MaDS` ASC";
+	$sql = "select * from danhsach ORDER by `MaDS` ASC"; //Sắp xếp
 	$danhsach = $connect->query($sql);
 	//Nếu kết quả kết nối không được thì xuất báo lỗi và thoát
 	if (!$danhsach) {
