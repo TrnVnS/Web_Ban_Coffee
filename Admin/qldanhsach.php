@@ -7,13 +7,15 @@
 		exit();
 	}
 ?>
-<h3>Danh sách đồ uống</h3>
+<h3>Danh sách món</h3>
+<a class="btn btn-outline-dark rounded-pill mb-3" href="index.php?do=themmon"><i class="bi bi-plus-circle"></i> Thêm món</a>
 <table class="table table-hover table-bordered align-middle">
     <thead class="table-secondary">
         <tr>
             <th>STT</th>
             <th>Mã món</th>
             <th>Tên</th>
+			<th>Phân loại</th>
             <th>Đơn giá</th>
             <th>Hình ảnh</th>
             <th colspan="2">Hành động</th>
@@ -27,6 +29,7 @@
 				echo "<td>" . $stt . "</td>";
 				echo "<td>" . $dong['MaDS'] . "</td>";
 				echo "<td>" . $dong['Ten'] . "</td>";
+				echo "<td>" . $dong['PhanLoai'] . "</td>";
 				echo "<td>" . $dong['DonGia'] . "</td>";
 				echo "<td><img src='".$dong['HinhAnh']."' width='100'/></td>";
 

@@ -9,7 +9,7 @@
 
 ?>
 <h3>Danh sách người dùng</h3>
-<a class="btn btn-outline-dark rounded-pill mb-3" href="index.php?do=register"><i class="bi bi-plus-circle"></i> Thêm người dùng</a>
+<a class="btn btn-outline-dark rounded-pill mb-3" href="index.php?do=themnguoidung"><i class="bi bi-plus-circle"></i> Thêm người dùng</a>
 <table class="table table-hover table-bordered align-middle">
     <thead class="table-secondary">  
         <tr>

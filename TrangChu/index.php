@@ -104,7 +104,7 @@ include_once "thuvien.php";
                     <div class="col-5 col-md-3 mb-3">
                         <h5>Về chúng tôi</h5>
                         <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Trang chủ</a></li>
+                            <li class="nav-item mb-2"><a href="index.php?do=home" class="nav-link p-0 text-dark">Trang chủ</a></li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Về chúng tôi</a></li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">FAQs</a></li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Hệ thống cửa hàng</a></li>
