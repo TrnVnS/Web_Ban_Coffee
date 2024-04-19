@@ -10,6 +10,4 @@
 	{
 		echo "<h2 align='center'>Bạn đã xoá sản phầm một sản phẩm</h2>";
 	}
-	
-	
 ?>
