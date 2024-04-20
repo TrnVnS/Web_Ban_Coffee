@@ -35,7 +35,7 @@
 			$themnd = $connect->query($sql_them);
 			
 			if($themnd)
-				ThongBao("Đăng ký thành công!");
+				ThongBao("Thêm người dùng ".$HoVaTen." thành công!");
 			else
 				ThongBaoLoi($connect->error);
 		}

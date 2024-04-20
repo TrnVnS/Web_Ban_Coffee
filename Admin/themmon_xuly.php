@@ -31,9 +31,8 @@
 			
 			if (move_uploaded_file($_FILES['HinhAnh']['tmp_name'], $target_path))
 			{
-				echo "Tập tin " . basename($_FILES['HinhAnh']['name']) . " đã được upload.<br/>";			
+				//			
 			}
-				
 			else
 				echo "Tập tin upload không thành công.<br/>";		
 			

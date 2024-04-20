@@ -9,9 +9,10 @@
 	}
 	else
 	{
-        $sql1 = "SELECT * FROM `nguoidung` WHERE MaNguoiDung = " . $_GET['id'];
+        
+		$sql1 = "SELECT * FROM `nguoidung` WHERE MaNguoiDung = " . $_GET['id'];
         $danhsach = $connect->query($sql1);
         $dong = $danhsach->fetch_array(MYSQLI_ASSOC);
-		echo "<h2 align='center'>Bạn đã xoá người dùng tên: " . $dong['MaNguoiDung'] . "</h2>";
+		echo "<h2 align='center'>Đã xoá người dùng.</h2>";
 	}
 ?>

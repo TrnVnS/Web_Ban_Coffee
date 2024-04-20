@@ -22,7 +22,7 @@
     <body>
         <!--Header-->
         <header>
-            <div id="banner"></div>
+            <!-- <div id="banner"></div> -->
             <nav class="navbar navbar-expand bg-dark">
                 <div class="container justify-content-start">
                     <a class="navbar-brand ms-2" href="index.php?do=home">

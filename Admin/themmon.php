@@ -1,5 +1,5 @@
 <h3>Thêm món</h3>
-<form class="row g-1" action="index.php?do=themmon_xuly" method="post">
+<form class="row g-1" enctype="multipart/form-data" action="index.php?do=themmon_xuly" method="post">
     <div class="flex justify-content-start mt-2">
         <div class="mb-3">
             <label class="form-label">Tên món</label>
