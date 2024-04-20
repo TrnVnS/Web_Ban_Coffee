@@ -34,7 +34,7 @@
 				echo "<td><img src='".$dong['HinhAnh']."' width='100'/></td>";
 
 				echo "<td align='center'><a href='index.php?do=mon_sua&id=" . $dong['MaDS'] . "'><i class='bi bi-pencil-square'></i></a></td>";
-				echo "<td align='center'><a href='index.php?do=mon_xoa&id=" . $dong['MaDS'] . "' onclick='return confirm(\"Bạn có muốn xóa món " . $dong['Ten'] . " không?\")'><i class='bi bi-trash3'></i></a></td>";
+				echo "<td align='center'><a href='index.php?do=mon_xoa_xuly&id=" . $dong['MaDS'] . "' onclick='return confirm(\"Bạn có muốn xóa món " . $dong['Ten'] . " không?\")'><i class='bi bi-trash3'></i></a></td>";
 			echo "</tr>";
 			$stt++;
 		}

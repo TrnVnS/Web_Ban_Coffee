@@ -14,7 +14,9 @@
 	}
 	else
 	{
-        
-		echo "<h2 align='center'>Bạn đã xoá người dùng tên: " . $ten . "</h2>";
+        $sql1 = "SELECT * FROM `nguoidung` WHERE MaNguoiDung = " . $_GET['id'];
+        $danhsach = $connect->query($sql1);
+        $dong = $danhsach->fetch_array(MYSQLI_ASSOC);
+		echo "<h2 align='center'>Bạn đã xoá người dùng tên: " . $dong['MaNguoiDung'] . "</h2>";
 	}
 ?>

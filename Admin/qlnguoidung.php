@@ -36,7 +36,7 @@
 					else if ($dong["QuyenHan"] == 2)
 						echo "Nhân viên (<a href='index.php?do=nguoidung_quyen&id=" . $dong["MaNguoiDung"] . "&quyen=1'>Nâng quyền</a>)";
 					else
-						echo "Khách hàng (<a href='index.php?do=nguoidung_quyen&id=" . $dong["MaNguoiDung"] . "&quyen=1'>Nâng quyền</a>)";	
+						echo "Khách hàng";	
 				echo "</td>";
 				
 				echo "<td align='center'>";
