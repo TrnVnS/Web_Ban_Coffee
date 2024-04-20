@@ -1,5 +1,5 @@
 <?php
-	$sql = "SELECT * FROM `nguoidung` WHERE 1";
+	$sql = "SELECT * FROM `nguoidung`";
 	$danhsach = $connect->query($sql);
 	//Nếu kết quả kết nối không được thì xuất báo lỗi và thoát
 	if (!$danhsach) {
@@ -32,9 +32,11 @@
 				
 				echo "<td>";
 					if($dong["QuyenHan"] == 1)
-						echo "Quản trị (<a href='index.php?do=nguoidung_kichhoat&id=" . $dong["MaNguoiDung"] . "&quyen=2'>Hạ quyền</a>)";
+						echo "Quản trị (<a href='index.php?do=nguoidung_quyen&id=" . $dong["MaNguoiDung"] . "&quyen=2'>Hạ quyền</a>)";
+					else if ($dong["QuyenHan"] == 2)
+						echo "Nhân viên (<a href='index.php?do=nguoidung_quyen&id=" . $dong["MaNguoiDung"] . "&quyen=1'>Nâng quyền</a>)";
 					else
-						echo "Thành viên (<a href='index.php?do=nguoidung_kichhoat&id=" . $dong["MaNguoiDung"] . "&quyen=1'>Nâng quyền</a>)";
+						echo "Khách hàng (<a href='index.php?do=nguoidung_quyen&id=" . $dong["MaNguoiDung"] . "&quyen=1'>Nâng quyền</a>)";	
 				echo "</td>";
 				
 				echo "<td align='center'>";
