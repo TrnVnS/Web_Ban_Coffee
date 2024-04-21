@@ -21,7 +21,8 @@ p.ad_content{
     height: 260px;	
     float: left;
     margin: 20px;
-    
+    margin-left: 50px;
+    margin-top: 40px;
 }
 
 .card {
@@ -36,7 +37,9 @@ p.ad_content{
     text-align: center;
 	border: 1px solid #696969;
 	float: left; 
+    padding-bottom: 10px;
 }
+
 
 table{
     text-align: center;

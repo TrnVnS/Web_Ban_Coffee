@@ -23,8 +23,8 @@
 					echo "<div class='khungsp'>";
 						echo "<div class='card'>";		
 							echo "<img class='hinhanhphim' src=" . $row["HinhAnh"] . " style='height: 180px;'>";
-							echo "<span class='giaban'>". $row["DonGia"] ." đ</span>";
-							echo "<p><a  href=''>". $row["Ten"] ." </a></p>";
+							echo "<p class='giaban'>". $row["DonGia"] ." đ</p>";
+							echo "<p><b>". $row["Ten"] ." </b></p>";
 							//hiện thông tin mua và thêm vào giỏ hàng
 							if(isset($_SESSION['MaND']))
 							{
