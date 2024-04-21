@@ -25,35 +25,52 @@ USE `qlcoffee`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `danhsach`
+-- Table structure for table `mon`
 --
 
-DROP TABLE IF EXISTS `danhsach`;
-CREATE TABLE IF NOT EXISTS `danhsach` (
-  `MaDS` int(10) NOT NULL AUTO_INCREMENT,
+DROP TABLE IF EXISTS `mon`;
+CREATE TABLE IF NOT EXISTS `mon` (
+  `MaMon` int(10) NOT NULL AUTO_INCREMENT,
   `Ten` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `MoTa` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
   `PhanLoai` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `DonGia` int(10) NOT NULL,
   `HinhAnh` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`MaDS`)
+  PRIMARY KEY (`MaMon`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=11;
 
 --
--- Dumping data for table `danhsach`
+-- Dumping data for table `Mon`
 --
 
-INSERT INTO `danhsach` (`MaDS`, `Ten`, `MoTa`, `PhanLoai`, `DonGia`, `HinhAnh`) VALUES
-(1, 'Cà phê truyền thống', '', 'đồ uống', 20000, 'images/h1_cftruyenthong.jpg'),
-(2, 'Cà phê truyền thống', '', 'đồ uống', 20000, 'images/h1_cftruyenthong.jpg'),
-(3, 'Cà phê truyền thống', '', 'đồ uống', 20000, 'images/h1_cftruyenthong.jpg'),
-(4, 'Cà phê truyền thống', '', 'đồ uống', 20000, 'images/h1_cftruyenthong.jpg'),
-(5, 'Cà phê truyền thống', '', 'đồ uống', 20000, 'images/h1_cftruyenthong.jpg'),
-(6, 'Cà phê truyền thống', '', 'đồ uống', 20000, 'images/h1_cftruyenthong.jpg'),
-(7, 'Cà phê truyền thống', '', 'đồ uống', 20000, 'images/h1_cftruyenthong.jpg'),
-(8, 'Cà phê truyền thống', '', 'đồ uống', 20000, 'images/h1_cftruyenthong.jpg'),
-(9, 'Cà phê truyền thống', '', 'đồ uống', 20000, 'images/h1_cftruyenthong.jpg'),
-(10, 'Cà phê Americano', '', 'đồ uống',25000, 'images/h2_cfAmericano.jpg');
+INSERT INTO `mon` (`MaMon`, `Ten`, `PhanLoai`, `DonGia`, `HinhAnh`) VALUES
+(1, 'Trà dâu', 'đồ uống', 25000, 'images/tradau.jpg'),
+(2, 'Sinh tố bơ', 'đồ uống', 30000, 'images/sinhtobo.png'),
+(3, 'Bánh flan', 'món ăn', 20000, 'images/h1_banhflan.jpg'),
+(4, 'Tiramisu', 'món ăn', 45000, 'images/tiramisu.jpeg'),
+(5, 'Muffin', 'món ăn', 30000, 'images/h3_Muffin.jpg'),
+(6, 'Mousse cake', 'món ăn', 35000, 'images/h4_Mousse cake.jpg'),
+(7, 'Cupcake', 'món ăn', 25000, 'images/h5_Cupcake.jpg'),
+(8, 'Mocha', 'cà phê', 30000, 'images/mocha.png'),
+(9, 'Latte', 'cà phê', 25000, 'images/latte.jpg'),
+(10, 'Americano', 'cà phê',20000, 'images/americano.jpg'),
+(11, 'Espresso', 'cà phê',30000, 'images/espesso1.jpg'),
+(12, 'Capuccino', 'cà phê',40000, 'images/capuccino.jpg'),
+(13, 'Macchiato', 'cà phê',40000, 'images/macchiato.jpg'),
+(13, 'Chocolate đá xây', 'đồ uống',35000, 'images/socoladaxay.jpg'),
+(14, 'Matcha đá xây', 'đồ uống',35000, 'images/matchadaxay.jpg'),
+(15, 'Sữa chua đá xây việt quất', 'đồ uống',35000, 'images/suachuadaxayvietquat.jpg'),
+(16, 'Trà vải', 'đồ uống',25000, 'images/travai.jpg'),
+(17, 'Croissant', 'món ăn',25000, 'images/croissant.jpg'),
+(18, 'Pancake', 'món ăn',35000, 'images/pancakes.jpg'),
+(19, 'Macaron', 'món ăn',20000, 'images/macaron.jpg'),
+(20, 'Bạc xỉu', 'cà phê',25000, 'images/bacxiu.jpg'),
+(21, 'Cà phê sữa', 'cà phê',25000, 'images/caphesua.jpg'),
+(22, 'Donut', 'món ăn',30000, 'images/donut.jpg'),
+(23, 'Matcha latte', 'đồ uống',30000, 'images/matchalatte.jpg'),
+(24, 'Cacao đá', 'đồ uống',25000, 'images/cacaoda.jpg'),
+(25, 'Trà sữa kem trứng', 'đồ uống',35000, 'images/trasuakemtrung.png'),
+(26, 'Bánh táo', 'món ăn',30000, 'images/applepie.jpg');
+
 
 
 
@@ -107,7 +124,7 @@ CREATE TABLE IF NOT EXISTS `giohang` (
 -- Dumping data for table `giohang`
 --
 
-INSERT INTO `giohang` (`MaGH`, `  `, `MaDS`, `SoLuong`) VALUES
+INSERT INTO `giohang` (`MaGH`, `MaNguoiDung`, `MaDS`, `SoLuong`) VALUES
 (1, 4, 1,1),
 (2, 4, 10,1),
 (3, 4, 8,1);

@@ -7,7 +7,7 @@
     <body>
         <?php	
 			
-            $sql = "SELECT * FROM danhsach WHERE PhanLoai='đồ ăn'";
+            $sql = "SELECT * FROM danhsach WHERE PhanLoai='món ăn'";
 			$danhsach = $connect->query($sql);
                 
 			//Nếu kết quả kết nối không được thì xuất báo lỗi và thoát
@@ -37,6 +37,7 @@
 						echo "</div>";					
 					echo "</div>";
 				echo "</div>";
+				
 			}
 			
 		?>
