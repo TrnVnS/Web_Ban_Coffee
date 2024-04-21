@@ -10,7 +10,7 @@
         echo "<form id='f' action='index.php?do=giohang_mua_xuly&id=" .$row["MaGH"]."' method='post'>";
             echo '<table border="0" align="center">';
                 echo '<tr>
-                    <th colspan="2">THÔNG TIN ĐĂNG KÝ</th>
+                    <th colspan="2">THÔNG TIN ĐƠN</th>
                 </tr>';
                     echo '<tr>
                         <td width="30%">Họ và tên: </td>
@@ -41,8 +41,8 @@
                     </td>
                 </tr>';
                 echo '<tr>
-                    <td><input type="submit" value="Mua"></td>
                     <td><input type="submit" value="Huỷ" onclick="submitHuy()"></td>
+                    <td><input type="submit" value="Mua"></td>
                 </tr>  ';     
             echo '</table>';
         echo '</form>';

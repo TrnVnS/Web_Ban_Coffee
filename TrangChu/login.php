@@ -19,6 +19,6 @@
         </div>
         <div class="flex justify-center items-center text-center mt-3 border-top">
             Chưa có tài khoản? <a class="link" href="index.php?do=register">Đăng ký</a> ngay!
-        </div> 
+        </div>
     </form>
 </div>

@@ -34,20 +34,20 @@ p.ad_content{
     overflow: hidden;
     transition: transform 0.3s;
     text-align: center;
-	border: 1px solid red;
+	border: 1px solid #696969;
 	float: left; 
 }
 
 table{
-    margin-left: 300px;
     text-align: center;
-    border: solid black;
-}   
+    border: solid;
+    width: 1000px;
+}
 
-td{
+/* td{
     padding: 5px;
     border: solid rgb(120, 108, 91);
-}
+} */
 
 footer{
     margin: 50px;
