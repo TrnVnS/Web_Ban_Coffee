@@ -32,7 +32,6 @@ DROP TABLE IF EXISTS `danhsach`;
 CREATE TABLE IF NOT EXISTS `danhsach` (
   `MaDS` int(10) NOT NULL AUTO_INCREMENT,
   `Ten` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `MoTa` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
   `PhanLoai` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `DonGia` int(10) NOT NULL,
   `HinhAnh` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
@@ -43,17 +42,17 @@ CREATE TABLE IF NOT EXISTS `danhsach` (
 -- Dumping data for table `danhsach`
 --
 
-INSERT INTO `danhsach` (`MaDS`, `Ten`, `MoTa`, `PhanLoai`, `DonGia`, `HinhAnh`) VALUES
-(1, 'Cà phê truyền thống', '', 'đồ uống', 20000, 'images/h1_cftruyenthong.jpg'),
-(2, 'Cà phê truyền thống', '', 'đồ uống', 20000, 'images/h1_cftruyenthong.jpg'),
-(3, 'Cà phê truyền thống', '', 'đồ uống', 20000, 'images/h1_cftruyenthong.jpg'),
-(4, 'Cà phê truyền thống', '', 'đồ uống', 20000, 'images/h1_cftruyenthong.jpg'),
-(5, 'Cà phê truyền thống', '', 'đồ uống', 20000, 'images/h1_cftruyenthong.jpg'),
-(6, 'Cà phê truyền thống', '', 'đồ uống', 20000, 'images/h1_cftruyenthong.jpg'),
-(7, 'Cà phê truyền thống', '', 'đồ uống', 20000, 'images/h1_cftruyenthong.jpg'),
-(8, 'Cà phê truyền thống', '', 'đồ uống', 20000, 'images/h1_cftruyenthong.jpg'),
-(9, 'Cà phê truyền thống', '', 'đồ uống', 20000, 'images/h1_cftruyenthong.jpg'),
-(10, 'Cà phê Americano', '', 'đồ uống',25000, 'images/h2_cfAmericano.jpg');
+INSERT INTO `danhsach` (`MaDS`, `Ten`, `PhanLoai`, `DonGia`, `HinhAnh`) VALUES
+(1, 'Cà phê truyền thống', 'đồ uống', 20000, 'images/h1_cftruyenthong.jpg'),
+(2, 'Cà phê Americano', 'đồ uống', 20000, 'images/h2_cfAmericano.jpg'),
+(3, 'Bánh flan', 'món ăn', 20000, 'images/h1_banhflan.jpg'),
+(4, 'Tiramisu', 'món ăn', 20000, 'images/h2_Tiramisu.jpg'),
+(5, 'Muffin', 'món ăn', 20000, 'images/h3_Muffin.jpg'),
+(6, 'Mousse cake', 'Món ăn', 20000, 'images/h4_Mousse cake.jpg'),
+(7, 'Cupcake', 'món ăn', 20000, 'images/h5_Cupcake.jpg'),
+(8, 'Cà phê truyền thống', 'đồ uống', 20000, 'images/h1_cftruyenthong.jpg'),
+(9, 'Cà phê truyền thống', 'cà phê', 20000, 'images/h1_cftruyenthong.jpg'),
+(10, 'Cà phê Americano', 'đồ uống',25000, 'images/h2_cfAmericano.jpg');
 
 
 
@@ -107,7 +106,7 @@ CREATE TABLE IF NOT EXISTS `giohang` (
 -- Dumping data for table `giohang`
 --
 
-INSERT INTO `giohang` (`MaGH`, `  `, `MaDS`, `SoLuong`) VALUES
+INSERT INTO `giohang` (`MaGH`, `MaNguoiDung`, `MaDS`, `SoLuong`) VALUES
 (1, 4, 1,1),
 (2, 4, 10,1),
 (3, 4, 8,1);
