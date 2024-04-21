@@ -49,6 +49,14 @@ include_once "thuvien.php";
                     <div class="navbar" id="navbarNav">
                         <ul class="navbar-nav">
                             <?php
+                                // $sql="select * from giohang where MaNguoiDung=".$_SESSION['MaND'];
+                                // $list = $connect->query($sql);
+                                // //Nếu kết quả kết nối không được thì xuất báo lỗi và thoát
+                                // if (!$list) {
+                                //     die("Không thể thực hiện câu lệnh SQL: " . $connect->connect_error);
+                                //     exit();
+                                // }
+                                // $row = $list->fetch_array(MYSQLI_ASSOC);
                                 if(!isset($_SESSION['MaND']))
                                 {
                                     echo '<li class="nav-item ms-3">';
@@ -62,6 +70,16 @@ include_once "thuvien.php";
                                 {
                                     echo '<li class="nav-item">';
                                         echo '<a class="btn btn-outline-light rounded-pill" href="index.php?do=giohang&id='.$_SESSION['MaND'].'">';
+                                            // $count=0;
+                                            // while($row){
+                                            //     $count=$count+$row['SoLuong'];
+                                            // }
+                                            // if($count>0){
+                                            //     echo 
+                                            //     '<span class="badge rounded-pill bg-danger me-1">'
+                                            //     .$count.
+                                            //     '</span>';
+                                            // }
                                             echo '<i class="bi bi-cart"></i> Giỏ hàng';
                                         echo '</a>';
                                     echo '</li>';
@@ -75,7 +93,7 @@ include_once "thuvien.php";
                                         if($_SESSION['Quyen']!=3){
                                             echo 
                                             '<li><hr class="dropdown-divider"></li>
-                                            <li><a class="dropdown-item" href="/DoAn/DoAn/Admin/index.php?do=home">Trang quản lý</a></li>';
+                                            <li><a class="dropdown-item" href="/DoAn/DoAn/Admin/index.php?do=dangxuat">Trang quản lý</a></li>';
                                         }
                                     echo'</ul>';
                                     echo '<li class="nav-item ms-3">';

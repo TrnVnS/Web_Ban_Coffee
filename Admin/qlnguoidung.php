@@ -32,9 +32,9 @@
 				
 				echo "<td>";
 					if($dong["QuyenHan"] == 1)
-						echo "Quản trị (<a href='index.php?do=nguoidung_quyen&id=" . $dong["MaNguoiDung"] . "&quyen=2'>Hạ quyền</a>)";
+						echo "Quản trị (<a class='link-danger' href='index.php?do=nguoidung_quyen&id=" . $dong["MaNguoiDung"] . "&quyen=2'>Hạ quyền</a>)";
 					else if ($dong["QuyenHan"] == 2)
-						echo "Nhân viên (<a href='index.php?do=nguoidung_quyen&id=" . $dong["MaNguoiDung"] . "&quyen=1'>Nâng quyền</a>)";
+						echo "Nhân viên (<a class='link-success' href='index.php?do=nguoidung_quyen&id=" . $dong["MaNguoiDung"] . "&quyen=1'>Nâng quyền</a>)";
 					else
 						echo "Khách hàng";	
 				echo "</td>";
