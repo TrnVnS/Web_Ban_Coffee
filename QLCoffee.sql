@@ -48,29 +48,28 @@ INSERT INTO `mon` (`MaMon`, `Ten`, `PhanLoai`, `DonGia`, `HinhAnh`) VALUES
 (3, 'Bánh flan', 'món ăn', 20000, 'images/h1_banhflan.jpg'),
 (4, 'Tiramisu', 'món ăn', 45000, 'images/tiramisu.jpeg'),
 (5, 'Muffin', 'món ăn', 30000, 'images/h3_Muffin.jpg'),
-(6, 'Mousse cake', 'món ăn', 35000, 'images/h4_Mousse cake.jpg'),
+(6, 'Mousse cake', 'món ăn', 35000, 'images/h4_Moussecake.jpg'),
 (7, 'Cupcake', 'món ăn', 25000, 'images/h5_Cupcake.jpg'),
 (8, 'Mocha', 'cà phê', 30000, 'images/mocha.png'),
 (9, 'Latte', 'cà phê', 25000, 'images/latte.jpg'),
 (10, 'Americano', 'cà phê',20000, 'images/americano.jpg'),
-(11, 'Espresso', 'cà phê',30000, 'images/espesso1.jpg'),
-(12, 'Capuccino', 'cà phê',40000, 'images/capuccino.jpg'),
+(11, 'Espresso', 'cà phê',30000, 'images/espresso1.jpg'),
+(12, 'Cappuccino', 'cà phê',40000, 'images/cappuccino.jpg'),
 (13, 'Macchiato', 'cà phê',40000, 'images/macchiato.jpg'),
-(13, 'Chocolate đá xây', 'đồ uống',35000, 'images/socoladaxay.jpg'),
-(14, 'Matcha đá xây', 'đồ uống',35000, 'images/matchadaxay.jpg'),
-(15, 'Sữa chua đá xây việt quất', 'đồ uống',35000, 'images/suachuadaxayvietquat.jpg'),
-(16, 'Trà vải', 'đồ uống',25000, 'images/travai.jpg'),
-(17, 'Croissant', 'món ăn',25000, 'images/croissant.jpg'),
-(18, 'Pancake', 'món ăn',35000, 'images/pancakes.jpg'),
-(19, 'Macaron', 'món ăn',20000, 'images/macaron.jpg'),
-(20, 'Bạc xỉu', 'cà phê',25000, 'images/bacxiu.jpg'),
-(21, 'Cà phê sữa', 'cà phê',25000, 'images/caphesua.jpg'),
-(22, 'Donut', 'món ăn',30000, 'images/donut.jpg'),
-(23, 'Matcha latte', 'đồ uống',30000, 'images/matchalatte.jpg'),
-(24, 'Cacao đá', 'đồ uống',25000, 'images/cacaoda.jpg'),
-(25, 'Trà sữa kem trứng', 'đồ uống',35000, 'images/trasuakemtrung.png'),
-(26, 'Bánh táo', 'món ăn',30000, 'images/applepie.jpg');
-
+(14, 'Chocolate đá xây', 'đồ uống',35000, 'images/socoladaxay.jpg'),
+(15, 'Matcha đá xây', 'đồ uống',35000, 'images/matchadaxay.jpg'),
+(16, 'Sữa chua đá xây việt quất', 'đồ uống',35000, 'images/suachuadaxayvietquat.jpg'),
+(17, 'Trà vải', 'đồ uống',25000, 'images/travai.jpg'),
+(18, 'Croissant', 'món ăn',25000, 'images/croissant.jpg'),
+(19, 'Pancake', 'món ăn',35000, 'images/pancakes.jpg'),
+(20, 'Macaron', 'món ăn',20000, 'images/macaron.jpg'),
+(21, 'Bạc xỉu', 'cà phê',25000, 'images/bacxiu.jpg'),
+(22, 'Cà phê sữa', 'cà phê',25000, 'images/caphesua.jpg'),
+(23, 'Donut', 'món ăn',30000, 'images/donut.jpg'),
+(24, 'Matcha latte', 'đồ uống',30000, 'images/matchalatte.jpg'),
+(25, 'Cacao đá', 'đồ uống',25000, 'images/cacaoda.jpg'),
+(26, 'Trà sữa kem trứng', 'đồ uống',35000, 'images/trasuakemtrung.png'),
+(27, 'Bánh táo', 'món ăn',30000, 'images/applepie.jpg');
 
 
 
@@ -115,7 +114,7 @@ DROP TABLE IF EXISTS `giohang`;
 CREATE TABLE IF NOT EXISTS `giohang` (
   `MaGH` int(10) NOT NULL AUTO_INCREMENT,
   `MaNguoiDung` int(10) NOT NULL,
-  `MaDS` int(10) NOT NULL,
+  `MaMon` int(10) NOT NULL,
   `SoLuong` int(10) NOT NULL,
   PRIMARY KEY (`MaGH`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;

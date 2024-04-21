@@ -1,6 +1,6 @@
 <?php
     $MaMon = $_GET['id'];
-    $sql = "SELECT * FROM `danhsach` WHERE MaDS = ".$MaMon;
+    $sql = "SELECT * FROM `mon` WHERE MaMon = ".$MaMon;
 
     $danhsach = $connect->query($sql);
     //Nếu kết quả kết nối không được thì xuất báo lỗi và thoát
@@ -14,7 +14,7 @@
 <h3>Cập nhật thông tin món</h3>
 <form class="row g-1" action="index.php?do=mon_sua_xuly" method="post">
     <div class="flex justify-content-start mt-2">
-        <input type="hidden" name="MaMon" value="<?php echo $dong['MaDS']; ?>" />
+        <input type="hidden" name="MaMon" value="<?php echo $dong['MaMon']; ?>" />
         <div class="mb-3">
             <label class="form-label">Tên món</label>
             <input type="text" class="form-control" name="TenMon" value="<?php echo $dong['Ten'] ?>">
@@ -23,23 +23,23 @@
             <label class="form-label">Phân loại</label>
             <select class="form-select" aria-label="Default select example" name="PhanLoai">
                 <?php
-                    if($dong['PhanLoai']=='đồ uống'){
+                    if($dong['PhanLoai']=='cà phê'){
                         echo
-                        '<option value="đồ uống" selected>Đồ uống</option>
-                        <option value="đồ ăn">Món ăn</option>
-                        <option value="cà phê">Cà phê</option>';
+                        '<option value="cà phê" selected>Cà phê</option>
+                        <option value="đồ uống">Đồ uống</option>
+                        <option value="món ăn">Món ăn</option>';
                     }
-                    else if($dong['PhanLoai']=='đồ ăn'){
+                    else if($dong['PhanLoai']=='đồ uống'){
                         echo
-                        '<option value="đồ uống">Đồ uống</option>
-                        <option value="đồ ăn" selected>Món ăn</option>
-                        <option value="cà phê">Cà phê</option>';
+                        '<option value="cà phê">Cà phê</option>
+                        <option value="đồ uống" selected>Đồ uống</option>
+                        <option value="món ăn">Món ăn</option>';
                     }
-                    else if($dong['PhanLoai']=='cà phê'){
+                    else if($dong['PhanLoai']=='món ăn'){
                         echo
-                        '<option value="đồ uống">Đồ uống</option>
-                        <option value="đồ ăn">Món ăn</option>
-                        <option value="cà phê" selected>Cà phê</option>';
+                        '<option value="cà phê">Cà phê</option>
+                        <option value="đồ uống">Đồ uống</option>
+                        <option value="món ăn" selected>Món ăn</option>';
                     }
                 ?>
                 

@@ -2,7 +2,7 @@
     $magh = $_GET['id'];
 
     // Lấy mã giỏ hàng để xoá
-    $sql = "SELECT gh.*, ds.* FROM `giohang` gh, `danhsach` ds WHERE MaGH = '$magh' AND ds.MaDS = gh.MaDS";
+    $sql = "SELECT gh.*, m.* FROM `giohang` gh, `mon` m WHERE MaGH = '$magh' AND m.MaMon = gh.MaMon";
     $danhsach = $connect->query($sql);
 
     $row = $danhsach->fetch_assoc();

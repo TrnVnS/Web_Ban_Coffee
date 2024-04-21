@@ -1,5 +1,5 @@
 <?php
-	$sql = "select * from danhsach ORDER by `MaDS` ASC"; //Sắp xếp
+	$sql = "select * from mon ORDER by `MaMon` ASC"; //Sắp xếp
 	$danhsach = $connect->query($sql);
 	//Nếu kết quả kết nối không được thì xuất báo lỗi và thoát
 	if (!$danhsach) {
@@ -14,7 +14,7 @@
         <tr>
             <th>STT</th>
             <th>Mã món</th>
-            <th>Tên</th>
+            <th>Tên món</th>
 			<th>Phân loại</th>
             <th>Đơn giá</th>
             <th>Hình ảnh</th>
@@ -27,14 +27,14 @@
 		while ($dong = $danhsach->fetch_array(MYSQLI_ASSOC)) {	
 			echo "<tr>";
 				echo "<td>" . $stt . "</td>";
-				echo "<td>" . $dong['MaDS'] . "</td>";
+				echo "<td>" . $dong['MaMon'] . "</td>";
 				echo "<td>" . $dong['Ten'] . "</td>";
 				echo "<td>" . $dong['PhanLoai'] . "</td>";
 				echo "<td>" . $dong['DonGia'] . "</td>";
 				echo "<td><img src='".$dong['HinhAnh']."' width='100'/></td>";
 
-				echo "<td align='center'><a href='index.php?do=mon_sua&id=" . $dong['MaDS'] . "'><i class='bi bi-pencil-square'></i></a></td>";
-				echo "<td align='center'><a href='index.php?do=mon_xoa_xuly&id=" . $dong['MaDS'] . "' onclick='return confirm(\"Bạn có muốn xóa món " . $dong['Ten'] . " không?\")'><i class='bi bi-trash3'></i></a></td>";
+				echo "<td align='center'><a href='index.php?do=mon_sua&id=" . $dong['MaMon'] . "'><i class='bi bi-pencil-square'></i></a></td>";
+				echo "<td align='center'><a href='index.php?do=mon_xoa_xuly&id=" . $dong['MaMon'] . "' onclick='return confirm(\"Bạn có muốn xóa món " . $dong['Ten'] . " không?\")'><i class='bi bi-trash3'></i></a></td>";
 			echo "</tr>";
 			$stt++;
 		}

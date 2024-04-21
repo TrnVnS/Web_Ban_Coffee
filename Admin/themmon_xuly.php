@@ -12,7 +12,7 @@
 	else
 	{
 		// Kiểm tra người dùng đã tồn tại chưa
-		$sql_kiemtra = "SELECT * FROM danhsach WHERE Ten = '$TenMon'";
+		$sql_kiemtra = "SELECT * FROM mon WHERE Ten = '$TenMon'";
 		
 		$kiemtra = $connect->query($sql_kiemtra);
 		
@@ -38,8 +38,8 @@
 			
 			copy($target_path, $target_path1);
 			
-			$sql_them = "INSERT INTO `danhsach`(`Ten`, `MoTa`, `PhanLoai`, `DonGia`, `HinhAnh`)
-					VALUES ('$TenMon', '', '$PhanLoai', '$DonGia', '$target_path')";
+			$sql_them = "INSERT INTO `mon`(`Ten`, `PhanLoai`, `DonGia`, `HinhAnh`)
+					VALUES ('$TenMon', '$PhanLoai', '$DonGia', '$target_path')";
 			$themmon = $connect->query($sql_them);
 			
 			if($themmon)

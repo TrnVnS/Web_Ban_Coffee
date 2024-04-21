@@ -1,5 +1,5 @@
 <?php
-	$sql = "delete from `danhsach` where MaDS = " . $_GET['id'];
+	$sql = "delete from `mon` where MaMon = " . $_GET['id'];
 	$danhsach = $connect->query($sql);
 
 	//Nếu kết quả kết nối không được thì xuất báo lỗi và thoát

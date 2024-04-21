@@ -15,7 +15,7 @@
 				SET		Ten = '$TenMon',
 						PhanLoai = '$PhanLoai',
 						DonGia = $DonGia
-				WHERE	MaDS = $MaMon";
+				WHERE	MaMon = $MaMon";
 		
 		$danhsach = $connect->query($sql);
 		//Nếu kết quả kết nối không được thì xuất báo lỗi và thoát

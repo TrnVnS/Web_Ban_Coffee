@@ -8,9 +8,9 @@
         <div class="mb-3">
             <label class="form-label">Phân loại</label>
             <select class="form-select" aria-label="Default select example" name="PhanLoai">
-                <option value="đồ uống" selected>Đồ uống</option>
-                <option value="đồ ăn">Món ăn</option>
-                <option value="cà phê">Cà phê</option>
+                <option value="cà phê" selected>Cà phê</option>
+                <option value="món ăn">Món ăn</option>
+                <option value="đồ uống">Đồ uống</option>
             </select>
         </div>
         <div class="mb-3">
