@@ -19,7 +19,7 @@
             <th>Quyền</th>
             <th colspan="3">Hành động</th>
         </tr>
-        </thead>
+    </thead>
         <tbody>
 	<?php
 		//Dùng vòng lặp while truy xuất các phần tử trong table

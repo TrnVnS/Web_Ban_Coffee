@@ -22,14 +22,14 @@
 				echo "<div class='container'>";
 					echo "<div class='khungsp'>";
 						echo "<div class='card'>";		
-							echo "<img class='hinhanhphim' src=" . $row["HinhAnh"] . " style='height: 180px;'>";
+							echo "<img class='hinhsp' src=" . $row["HinhAnh"] . ">";
+							echo "<h4>". $row["Ten"] ."</h4>";
 							echo "<p class='giaban'>". $row["DonGia"] ." đ</p>";
-							echo "<p><b>". $row["Ten"] ." </b></p>";
 							//hiện thông tin mua và thêm vào giỏ hàng
 							if(isset($_SESSION['MaND']))
 							{
 								echo 
-								'<a href="index.php?do=giohang_them&id=' . $row["MaDS"] . '" class="btn btn-dark rounded-pill">
+								'<a href="index.php?do=giohang_them&id=' . $row["MaDS"] . '" class="btn btn-dark rounded-pill mt-2 mx-3">
 									<i class="bi bi-cart"></i> Thêm vào giỏ
 								</a>';
 							}		

@@ -18,28 +18,33 @@ p.ad_content{
 .khungsp
 {
     width: 250px;
-    height: 260px;	
+    height: 350px;	
     float: left;
-    margin: 20px;
     margin-left: 50px;
     margin-top: 40px;
 }
 
 .card {
-    width: 234px;
-    height: 300px;
+    width: 250px;
+    height: 350px;
     margin: 8px;
     padding: auto;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
     overflow: hidden;
     transition: transform 0.3s;
     text-align: center;
 	border: 1px solid #696969;
 	float: left; 
-    padding-bottom: 10px;
+    margin-bottom: 10px;
 }
-
+.hinhsp{
+    height: 200px;
+    margin-bottom: 10px;
+}
+p.giaban{
+    font-size: 15pt;
+    color: #212121;
+}
 
 table{
     text-align: center;
