@@ -20,15 +20,9 @@
                 <label for="txt_MK" class="form-label">Xác nhận mật khẩu</label>
                 <input type="password" id="txt_MK" class="form-control" aria-describedby="passwordHelpBlock" name="XNMatKhau">
             </div>
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" name="DieuKhoan">
-                <label class="form-check-label" for="cbo_DK">
-                    Đồng ý với <a class="link-success" href="#">điều khoản</a> của chúng tôi.
-                </label>
-            </div>
         </div>
         <div class="flex justify-center items-center text-center mt-3">
-            <input type="submit" class="btn btn-outline-dark rounded-pill" value="Đăng ký">
+            <input type="submit" class="btn btn-outline-dark rounded-pill"  value="Đăng ký">
         </div>
     </form>
 </div>
