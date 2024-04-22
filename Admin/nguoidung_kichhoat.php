@@ -14,14 +14,12 @@
     {
         $sql_update = "UPDATE `nguoidung` SET Khoa = 0 WHERE MaNguoiDung = '$MaND'";
         $danhsach = $connect->query($sql_update);
-
-        echo "<h2 align='center'> Đã mở khoá người dùng " . $dong['TenNguoiDung'] . "</h2>";
+        header("Location: index.php?do=qlnguoidung&id=".$MaND);
     }
     else
     {
         $sql_update = "UPDATE `nguoidung` SET Khoa = 1 WHERE MaNguoiDung = '$MaND'";
         $danhsach = $connect->query($sql_update);
-
-        echo "<h2 align='center'> Đã khoá người dùng " . $dong['TenNguoiDung'] . "</h2>";
+        header("Location: index.php?do=qlnguoidung&id=".$MaND);
     }
 ?>

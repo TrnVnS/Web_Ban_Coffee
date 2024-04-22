@@ -1,7 +1,7 @@
 <div>
     <div class="d-flex flex-row align-items-center m-5" style="background-color: #fc8365;">
         <div class="flex justify-center items-center">
-            <img src="images/chill.jpg" class="block" width="100%">
+            <img src="images/chill.jpg" class="img_ct">
         </div>
         <div class="flex justify-center items-center text-center px-5">
             <h1>Chắc chắn không ớn lạnh</h1>
@@ -13,7 +13,7 @@
 <div>
     <div class="d-flex flex-row flex-row-reverse align-items-center m-5" style="background-color: #ffe3c8;">
         <div class="flex justify-center items-center">
-            <img src="images/Espresso.jpg" class="block" width="100%">
+            <img src="images/Espresso.jpg" class="img_ct">
         </div>
         <div class="flex justify-center items-center text-center px-5">
             <h1>Ngon hết sức!</h1>
@@ -25,7 +25,7 @@
 <div>
     <div class="d-flex flex-row align-items-center m-5" style="background-color: #ddc8ff;">
         <div class="flex justify-center items-center">
-            <img src="images/oohlavender.jpg" class="block" width="100%">
+            <img src="images/oohlavender.jpg" class="img_ct">
         </div>
         <div class="flex justify-center items-center text-center px-5">
             <h1>Ooh la lavender</h1>
@@ -37,7 +37,7 @@
 <div>
     <div class="d-flex flex-row flex-row-reverse align-items-center m-5" style="background-color: #b0e1a0;">
         <div class="flex justify-center items-center">
-            <img src="images/Bacon.jpg" class="block" width="100%">
+            <img src="images/Bacon.jpg" class="img_ct">
         </div>
         <div class="flex justify-center items-center text-center px-5">
             <h1>Thỏa mãn sự yêu thích</h1>

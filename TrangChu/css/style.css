@@ -18,23 +18,32 @@ nav{
 p.ad_content{
     font-size: 18pt;
 }
+.img_ct{
+    transition: 0.25s;
+    width: 100%;
+}
+.img_ct:hover{
+    transform: scale(1.05);
+}
 .khungsp
 {
     width: 250px;
-    height: 350px;	
+    height: 360px;	
     float: left;
     margin-left: 50px;
     margin-top: 40px;
+    transition: 0.25s;
 }
-
+.khungsp:hover{
+    transform: scale(1.05);
+}
 .card {
     width: 250px;
-    height: 350px;
+    height: 360px;
     margin: 8px;
     padding: auto;
     border-radius: 15px;
     overflow: hidden;
-    transition: transform 0.3s;
     text-align: center;
 	border: 1px solid #696969;
 	float: left; 
@@ -42,6 +51,7 @@ p.ad_content{
 }
 .hinhsp{
     height: 200px;
+    object-fit: cover;
     margin-bottom: 10px;
 }
 p.giaban{
@@ -63,9 +73,13 @@ footer{
 .ThongBao{
     color: #20d462;
     background-color: #bafcd2;
+    font-size: 15pt;
+    padding: 5px;
 }
 .ThongBaoLoi{
     color: #f32727;
     background-color: #ffadad;
+    font-size: 15pt;
+    padding: 5px;
 }
 

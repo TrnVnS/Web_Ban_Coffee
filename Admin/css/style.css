@@ -21,8 +21,12 @@ footer{
 .ThongBao{
     color: #20d462;
     background-color: #bafcd2;
+    font-size: 15pt;
+    padding: 5px;
 }
 .ThongBaoLoi{
     color: #f32727;
     background-color: #ffadad;
+    font-size: 15pt;
+    padding: 5px;
 }
