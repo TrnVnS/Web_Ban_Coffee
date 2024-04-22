@@ -9,6 +9,9 @@ body{
     background-size: cover;
     height: 200px;
 }
+nav{
+    margin: 0px;
+}
 #content{
     padding: 20px;
 }
@@ -51,11 +54,6 @@ table{
     border: solid;
     width: 1000px;
 }
-
-/* td{
-    padding: 5px;
-    border: solid rgb(120, 108, 91);
-} */
 
 footer{
     margin: 50px;

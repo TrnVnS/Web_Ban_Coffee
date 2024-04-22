@@ -23,79 +23,80 @@ include_once "thuvien.php";
     <!--Header-->
     <header>
         <div id="banner"></div>
-        <nav class="navbar navbar-expand bg-dark">
-            <div class="container justify-content-start">
-                <a class="navbar-brand ms-2" href="">
-                    <img src="images/Logo.png" width="50px">
-                </a>
-                <div class="navbar">
-                    <ul class="nav nav-underline">
-                        <li class="nav-item ms-3">
-                            <a class="nav-link text-light" aria-current="page" href="index.php?do=home">Trang chủ</a>
-                        </li>
-                        <li class="nav-item ms-3">
-                            <a class="nav-link text-light" href="index.php?do=ca_phe">Cà phê</a>
-                        </li>
-                        <li class="nav-item ms-3">
-                            <a class="nav-link text-light" href="index.php?do=thuc_uong">Đồ uống</a>
-                        </li>
-                        <li class="nav-item ms-3">
-                            <a class="nav-link text-light" href="index.php?do=mon_an">Món ăn</a>
-                        </li>
-                    </ul>
-                </div>
+    </header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand bg-dark sticky-top">
+        <div class="container justify-content-start">
+            <a class="navbar-brand ms-2" href="">
+                <img src="images/Logo.png" width="50px">
+            </a>
+            <div class="navbar">
+                <ul class="nav nav-underline">
+                    <li class="nav-item ms-3">
+                        <a class="nav-link text-light" aria-current="page" href="index.php?do=home">Trang chủ</a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <a class="nav-link text-light" href="index.php?do=ca_phe">Cà phê</a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <a class="nav-link text-light" href="index.php?do=thuc_uong">Đồ uống</a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <a class="nav-link text-light" href="index.php?do=mon_an">Món ăn</a>
+                    </li>
+                </ul>
             </div>
-            <div class="container justify-content-end">
-                <div class="navbar" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <?php
-                        if (!isset($_SESSION['MaND'])) {
-                            echo '<li class="nav-item ms-3">';
-                            echo '<a class="btn btn-outline-light rounded-pill" href="index.php?do=register">Đăng ký</a>';
-                            echo '</li>';
-                            echo '<li class="nav-item ms-3 me-3">';
-                            echo '<a class="btn btn-light rounded-pill" href="index.php?do=login">Đăng nhập</a>';
-                            echo '</li>';
-                        } else {
-                            echo '<li class="nav-item">';
-                            echo '<a class="btn btn-outline-light rounded-pill" href="index.php?do=giohang&id=' . $_SESSION['MaND'] . '">';
-                            echo '<i class="bi bi-cart"></i> Giỏ hàng';
-                            $sql = "select * from giohang where MaNguoiDung=" . $_SESSION['MaND'];
-                            $list = $connect->query($sql);
-                            //Nếu kết quả kết nối không được thì xuất báo lỗi và thoát
-                            if (!$list) {
-                                die("Không thể thực hiện câu lệnh SQL: " . $connect->connect_error);
-                                exit();
-                            }
-                            $row = $list->fetch_array(MYSQLI_ASSOC);
-                            if ($row['SoLuong'] > 0) {
-                                echo '<span class="position-absolute top-0 start-30 translate-middle p-2 mt-2 bg-danger border border-light rounded-circle"></span>';
-                            }
-                            echo '</a>';
-                            echo '</li>';
-                            echo '<button class="btn btn-outline-light rounded-pill dropdown-toggle ms-3" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="bi bi-person-fill-gear"></i>
-                                            ' . $_SESSION['HoTen'] . '
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="index.php?do=hosocanhan">Hồ sơ</a></li>
-                                    <li><a class="dropdown-item" href="index.php?do=thaydoimk">Đổi mật khẩu</a></li>';
+        </div>
+        <div class="container justify-content-end">
+            <div class="navbar" id="navbarNav">
+                <ul class="navbar-nav">
+                    <?php
+                    if (!isset($_SESSION['MaND'])) {
+                        echo '<li class="nav-item ms-3">';
+                        echo '<a class="btn btn-outline-light rounded-pill" href="index.php?do=register">Đăng ký</a>';
+                        echo '</li>';
+                        echo '<li class="nav-item ms-3 me-3">';
+                        echo '<a class="btn btn-light rounded-pill" href="index.php?do=login">Đăng nhập</a>';
+                        echo '</li>';
+                    } else {
+                        echo '<li class="nav-item">';
+                        echo '<a class="btn btn-outline-light rounded-pill" href="index.php?do=giohang&id=' . $_SESSION['MaND'] . '">';
+                        echo '<i class="bi bi-cart"></i> Giỏ hàng';
+                        $sql = "select * from giohang where MaNguoiDung=" . $_SESSION['MaND'];
+                        $list = $connect->query($sql);
+                        //Nếu kết quả kết nối không được thì xuất báo lỗi và thoát
+                        if (!$list) {
+                            die("Không thể thực hiện câu lệnh SQL: " . $connect->connect_error);
+                            exit();
+                        }
+                        $row = $list->fetch_array(MYSQLI_ASSOC);
+                        if ($row['SoLuong'] > 0) {
+                            echo '<span class="position-absolute top-0 start-30 translate-middle p-2 mt-2 bg-danger border border-light rounded-circle"></span>';
+                        }
+                        echo '</a>';
+                        echo '</li>';
+                        echo 
+                        '<button class="btn btn-outline-light rounded-pill dropdown-toggle ms-3" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-fill-gear"></i>' . $_SESSION['HoTen'] . '
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.php?do=hosocanhan">Hồ sơ</a></li>
+                            <li><a class="dropdown-item" href="index.php?do=thaydoimk">Đổi mật khẩu</a></li>';
                             if ($_SESSION['Quyen'] != 3) {
                                 echo
                                 '<li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="/DoAn/DoAn/Admin/index.php?do=dangxuat">Trang quản lý</a></li>';
+                                    <li><a class="dropdown-item" href="/DoAn/DoAn/Admin/index.php?do=dangxuat">Trang quản lý</a></li>';
                             }
-                            echo '</ul>';
-                            echo '<li class="nav-item ms-3">';
-                            echo '<a class="btn btn-outline-light rounded-pill" href="index.php?do=dangxuat_xuly">Đăng xuất</a>';
-                            echo '</li>';
-                        }
-                        ?>
-                    </ul>
-                </div>
+                        echo '</ul>';
+                        echo '<li class="nav-item ms-3">';
+                        echo '<a class="btn btn-outline-light rounded-pill" href="index.php?do=dangxuat_xuly">Đăng xuất</a>';
+                        echo '</li>';
+                    }
+                    ?>
+                </ul>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
     <!--Content-->
     <div id="content">
         <?php

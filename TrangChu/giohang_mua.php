@@ -2,7 +2,7 @@
     $magh = $_GET['id'];
 
     // Kiểm tra xem món ăn đã tồn tại trong giỏ hàng của người dùng chưa
-    $sql = "SELECT gh.*, m.*, nd.* FROM `giohang` gh , `mon` m, `nguoidung` nd  WHERE MaGH='$magh' AND m.MaMon = ds.MaMon AND nd.MaNguoiDung = gh.MaNguoiDung";	
+    $sql = "SELECT gh.*, m.*, nd.* FROM `giohang` gh , `mon` m, `nguoidung` nd  WHERE MaGH='$magh' AND m.MaMon = gh.MaMon AND nd.MaNguoiDung = gh.MaNguoiDung";	
     $danhsach = $connect->query($sql);
     while ($row = $danhsach->fetch_array(MYSQLI_ASSOC)) 
     {
@@ -10,39 +10,43 @@
         echo "<form id='f' action='index.php?do=giohang_mua_xuly&id=" .$row["MaGH"]."' method='post'>";
             echo '<table border="0" align="center">';
                 echo '<tr>
-                    <th colspan="2">THÔNG TIN ĐƠN</th>
+                    <th colspan="2"><h4>THÔNG TIN ĐƠN</h4></th>
                 </tr>';
-                    echo '<tr>
-                        <td width="30%">Họ và tên: </td>
-                    <td width="70%">
-                        ' . $row["TenNguoiDung"] .'
+                echo '<tr>
+                    <td width="30%">Họ và tên</td>
+                    <td>
+                        <input type="text" readonly class="form-control-plaintext" value="'. $row["TenNguoiDung"] .'" name="TenDangNhap">
                     </td>
                 </tr>';
                 echo '<tr>
-                    <td>Tên sản phẩm</td>
-                    <td>'. $row['Ten'] .'</td>
+                    <td>Tên món</td>
+                    <td>
+                        <input type="text" readonly class="form-control-plaintext" value="'. $row["Ten"] .'" name="TenDangNhap">
+                    </td>
                 </tr>';
                 echo '<tr>
                     <td>Số lượng</td>
                     <td>
-                        <input id="txtSoLuong" type="text" value="'. $row["SoLuong"] .'" onchange="updateGia()">
+                        <input id="txtSoLuong" class="form-control" type="text" value="'. $row["SoLuong"] .'" onchange="updateGia()">
                     </td>
                 </tr>';
                 echo '<tr>
                     <td>Giá</td>
                     <td>
-                        <input id="txtGia" type="text" value="'. $gia .'" readonly="true">
+                        <input id="txtGia" class="form-control" type="text" value="'. $gia .'" readonly="true">
                     </td>
                 </tr>';
                 echo '<tr>
                     <td>Ghi chú</td>
                     <td>
-                        <textarea name="txtGhiChu"></textarea>
+                        <textarea class="form-control" rows="3" name="txtGhiChu"></textarea>
                     </td>
                 </tr>';
                 echo '<tr>
-                    <td><input type="submit" value="Huỷ" onclick="submitHuy()"></td>
-                    <td><input type="submit" value="Mua"></td>
+                    <th colspan="2">
+                        <input type="submit" class="btn btn-outline-dark rounded-pill m-2" value="Huỷ" onclick="submitHuy()">
+                        <input type="submit" class="btn btn-dark rounded-pill m-2" value="Mua">
+                    </th>
                 </tr>  ';     
             echo '</table>';
         echo '</form>';
