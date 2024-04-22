@@ -12,7 +12,6 @@
                 <label for="txt_MK" class="form-label">Mật khẩu</label>
                 <input type="password" class="form-control" aria-describedby="passwordHelpBlock" name="MatKhau">
             </div>
-            <a class="link text-dark" href="index.php?do=quenmatkhau">Quên mật khẩu</a>
         </div>
         <div class="flex justify-center items-center text-center mt-3">
             <input type="submit" class="btn btn-outline-dark rounded-pill" value="Đăng nhập">
