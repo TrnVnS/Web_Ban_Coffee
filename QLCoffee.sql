@@ -123,7 +123,7 @@ CREATE TABLE IF NOT EXISTS `giohang` (
 -- Dumping data for table `giohang`
 --
 
-INSERT INTO `giohang` (`MaGH`, `MaNguoiDung`, `MaDS`, `SoLuong`) VALUES
+INSERT INTO `giohang` (`MaGH`, `MaNguoiDung`, `MaMon`, `SoLuong`) VALUES
 (1, 4, 1,1),
 (2, 4, 10,1),
 (3, 4, 8,1);
