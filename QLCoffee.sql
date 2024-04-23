@@ -58,7 +58,7 @@
   (13, 'Macchiato', 'cà phê',40000, 'images/macchiato.jpg'),
   (14, 'Chocolate đá xây', 'đồ uống',35000, 'images/socoladaxay.jpg'),
   (15, 'Matcha đá xây', 'đồ uống',35000, 'images/matchadaxay.jpg'),
-  (16, 'Sữa chua đá xây việt quất', 'đồ uống',35000, 'images/suachuadaxayvietquat.jpg'),
+  (16, 'Sữa chua việt quất', 'đồ uống',35000, 'images/suachuadaxayvietquat.jpg'),
   (17, 'Trà vải', 'đồ uống',25000, 'images/travai.jpg'),
   (18, 'Croissant', 'món ăn',25000, 'images/croissant.jpg'),
   (19, 'Pancake', 'món ăn',35000, 'images/pancakes.jpg'),
@@ -70,11 +70,10 @@
   (25, 'Cacao đá', 'đồ uống',25000, 'images/cacaoda.jpg'),
   (26, 'Trà sữa kem trứng', 'đồ uống',35000, 'images/trasuakemtrung.png'),
   (27, 'Bánh táo', 'món ăn',30000, 'images/applepie.jpg'),
-  (28, 'Combo Spicy Lemonade Refreshers', 'đồ uống',85000, 'images/chill.jpg'),
+  (28, 'Combo nước chanh', 'đồ uống',85000, 'images/chill.jpg'),
   (29, 'Cà phê sữa yến mạch', 'cà phê',30000, 'images/Espresso.jpg'),
   (30, 'Ooh la lavender', 'đồ uống',30000, 'images/oohlavender.jpg'),
-  (31, 'Sandwich thịt xông khói', 'món ăn',30000, 'images/Bacon.jpg');
-
+  (31, 'Sandwich thịt', 'món ăn',30000, 'images/Bacon.jpg');
 
 
   -- --------------------------------------------------------
@@ -120,7 +119,9 @@
     `MaNguoiDung` int(10) NOT NULL,
     `MaMon` int(10) NOT NULL,
     `SoLuong` int(10) NOT NULL,
-    PRIMARY KEY (`MaGH`)
+    PRIMARY KEY (`MaGH`),
+    FOREIGN KEY(`MaNguoiDung`) REFERENCES nguoidung(`MaNguoiDung`) ON DELETE CASCADE,
+    FOREIGN KEY(`MaMon`) REFERENCES mon(`MaMon`) ON DELETE CASCADE
   ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
 
   --
