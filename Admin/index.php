@@ -126,7 +126,7 @@ include_once "thuvien.php";
             <div class="container bg-white">
                 <footer class="py-4">
                     <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-2 border-top text-dark">
-                        <a class="nav-link" href="/DoAn/DoAn/TrangChu/index.php?do=home"><i class="bi bi-chevron-left"></i>Quay về trang mua sắm</a>
+                        <a class="nav-link" href="../TrangChu/index.php?do=home"><i class="bi bi-chevron-left"></i>Quay về trang mua sắm</a>
                         <p>© 2024 Bản quyền thuộc về Kohi Coffee.</p>
                         <div>
                             <img src="images/logotbbct.png" width="100px">

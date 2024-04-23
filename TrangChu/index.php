@@ -87,7 +87,7 @@ include_once "thuvien.php";
                             if ($_SESSION['Quyen'] != 3) {
                                 echo
                                 '<li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="/DoAn/DoAn/Admin/index.php?do=home">Trang quản lý</a></li>';
+                                <li><a class="dropdown-item" href="../Admin/index.php?do=home">Trang quản lý</a></li>';
                             }
                         echo '</ul>';
                         echo '<li class="nav-item ms-3">';
