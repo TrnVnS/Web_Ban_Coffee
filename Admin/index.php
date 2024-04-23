@@ -77,12 +77,12 @@ include_once "thuvien.php";
                                     if (!isset($_SESSION['MaND'])) {
                                         echo '<li class="nav-item ms-3">Đăng nhập để sử dụng các chức năng</li>';
                                     } else {
-                                        if ($_SESSION['QuyenHan'] == 2) {
+                                        if ($_SESSION['Quyen'] == 2) {
                                             echo
                                             '<li class="nav-item ms-3">
                                                 <a class="nav-link" href="index.php?do=themmon">Thêm món</a>
                                             </li>';
-                                        } else if ($_SESSION['QuyenHan'] == 1) {
+                                        } else if ($_SESSION['Quyen'] == 1) {
                                             echo
                                             '<li class="nav-item ms-3">
                                                 <a class="nav-link" href="index.php?do=themmon">Thêm món</a>
@@ -126,7 +126,7 @@ include_once "thuvien.php";
             <div class="container bg-white">
                 <footer class="py-4">
                     <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-2 border-top text-dark">
-                        <a class="nav-link" href="/DoAn/DoAn/TrangChu/index.php?do=dangxuat_xuly"><i class="bi bi-chevron-left"></i>Quay về trang mua sắm</a>
+                        <a class="nav-link" href="/DoAn/DoAn/TrangChu/index.php?do=home"><i class="bi bi-chevron-left"></i>Quay về trang mua sắm</a>
                         <p>© 2024 Bản quyền thuộc về Kohi Coffee.</p>
                         <div>
                             <img src="images/logotbbct.png" width="100px">

@@ -8,6 +8,6 @@
 	}
 	else
 	{
-		echo "<h2 align='center'>Bạn đã xoá sản phẩm khỏi giỏ hàng.</h2>";
+		echo "<h2 align='center'>Đã xoá món khỏi giỏ hàng.</h2>";
 	}
 ?>

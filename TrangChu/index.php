@@ -60,9 +60,8 @@ include_once "thuvien.php";
                         echo '</li>';
                     } else {
                         echo '<li class="nav-item">';
-                        echo '<a class="btn btn-outline-light rounded-pill" href="index.php?do=giohang&id=' . $_SESSION['MaND'] . '">';
-                        echo '<i class="bi bi-cart"></i> Giỏ hàng';
-                        $sql = "select * from giohang where MaNguoiDung=" . $_SESSION['MaND'];
+                        echo '<a class="btn btn-outline-light rounded-pill position-relative" href="index.php?do=giohang&id=' . $_SESSION['MaND'] . '">';
+                        $sql = "select count(SoLuong) as 'count' from giohang where MaNguoiDung=" . $_SESSION['MaND'];
                         $list = $connect->query($sql);
                         //Nếu kết quả kết nối không được thì xuất báo lỗi và thoát
                         if (!$list) {
@@ -70,14 +69,17 @@ include_once "thuvien.php";
                             exit();
                         }
                         $row = $list->fetch_array(MYSQLI_ASSOC);
-                        if ($row['SoLuong'] > 0) {
-                            echo '<span class="position-absolute top-0 start-30 translate-middle p-2 mt-2 bg-danger border border-light rounded-circle"></span>';
+                        if ($row['count'] > 0) {
+                            echo '<span class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-pill bg-danger">
+                                '.$row['count'].'
+                            </span>';
                         }
+                        echo '<i class="bi bi-cart"></i> Giỏ hàng';
                         echo '</a>';
                         echo '</li>';
                         echo 
                         '<button class="btn btn-outline-light rounded-pill dropdown-toggle ms-3" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi bi-person-fill-gear"></i>' . $_SESSION['HoTen'] . '
+                            <i class="bi bi-person-fill-gear"></i> ' . $_SESSION['HoTen'] . '
                         </button>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="index.php?do=hosocanhan">Hồ sơ</a></li>
@@ -85,7 +87,7 @@ include_once "thuvien.php";
                             if ($_SESSION['Quyen'] != 3) {
                                 echo
                                 '<li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="/DoAn/DoAn/Admin/index.php?do=dangxuat">Trang quản lý</a></li>';
+                                <li><a class="dropdown-item" href="/DoAn/DoAn/Admin/index.php?do=home">Trang quản lý</a></li>';
                             }
                         echo '</ul>';
                         echo '<li class="nav-item ms-3">';

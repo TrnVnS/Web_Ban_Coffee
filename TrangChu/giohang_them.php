@@ -13,10 +13,12 @@
 
         $sql_update = "UPDATE giohang SET SoLuong = '$new_quantity' WHERE MaNguoiDung = '$mand' AND MaMon = '$mamon'";
         $connect->query($sql_update);
+        echo "<h2 align='center'>Đã thêm món vào giỏ hàng.</h2>";
     } else {
         // Nếu món chưa tồn tại, thêm mới vào giỏ hàng
         $sql_addgiohang = "INSERT INTO `giohang`(`MaNguoiDung`, `MaMon`, SoLuong) VALUES
                         ('$mand', '$mamon', 1)";
         $connect->query($sql_addgiohang);
+        echo "<h2 align='center'>Đã thêm món vào giỏ hàng.</h2>";
     }
 ?>
