@@ -58,12 +58,12 @@
     function updateGia() {
         var sl = document.getElementById("txtSoLuong").value;
         var gia = sl * <?php
-                            $sql = "SELECT gh.*, m.*, nd.* FROM `giohang` gh , `mon` m, `nguoidung` nd  WHERE MaGH='$magh' AND gh.MaMon = ds.MaMon AND nd.MaNguoiDung = gh.MaNguoiDung";	
+                            $sql = "SELECT gh.*, m.*, nd.* FROM `giohang` gh , `mon` m, `nguoidung` nd  WHERE MaGH='$magh' AND gh.MaMon = m.MaMon AND nd.MaNguoiDung = gh.MaNguoiDung";	
                             $danhsach = $connect->query($sql);
                             $row = $danhsach->fetch_array(MYSQLI_ASSOC);
                             echo $row["DonGia"]; 
                         ?>;
-        document.getElementById("txtGia").value = gia + 'đ';
+        document.getElementById("txtGia").value = gia;
     }
 
     function submitHuy() {
