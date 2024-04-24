@@ -1,6 +1,6 @@
 <div class="d-flex justify-content-center m-5">
     <form class="row g-1" action="index.php?do=dangnhap_xuly" method="post">
-        <div class="flex justify-center items-center text-center px-5">
+        <div class="flex justify-center items-center text-center px-5 border-bottom">
             <h1>Đăng nhập</h1>
         </div>
         <div class="flex justify-content-start mt-2">
